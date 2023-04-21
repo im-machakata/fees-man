@@ -1,0 +1,8 @@
+C:\Users\Caasi\Documents\SharpDevelop Projects\FeesManagement\FeesManagement\bin\Debug\FeesManagement.exe
+C:\Users\Caasi\Documents\SharpDevelop Projects\FeesManagement\FeesManagement\bin\Debug\FeesManagement.pdb
+C:\Users\Caasi\Documents\SharpDevelop Projects\FeesManagement\FeesManagement\obj\Debug\FeesManagement.csprojResolveAssemblyReference.cache
+C:\Users\Caasi\Documents\SharpDevelop Projects\FeesManagement\FeesManagement\obj\Debug\FeesManagement.MainForm.resources
+C:\Users\Caasi\Documents\SharpDevelop Projects\FeesManagement\FeesManagement\obj\Debug\FeesManagement.csproj.GenerateResource.Cache
+C:\Users\Caasi\Documents\SharpDevelop Projects\FeesManagement\FeesManagement\obj\Debug\FeesManagement.exe
+C:\Users\Caasi\Documents\SharpDevelop Projects\FeesManagement\FeesManagement\obj\Debug\FeesManagement.pdb
+C:\Users\Caasi\Documents\SharpDevelop Projects\FeesManagement\FeesManagement\obj\Debug\FeesManagement.ReportsForm.resources
