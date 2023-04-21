@@ -39,6 +39,7 @@ namespace FeesManagement
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.StudentReport = new System.Windows.Forms.TabControl();
 			this.StudentPage = new System.Windows.Forms.TabPage();
+			this.panel2 = new System.Windows.Forms.Panel();
 			this.studentClass = new System.Windows.Forms.TextBox();
 			this.studentBalance = new System.Windows.Forms.Label();
 			this.studentName = new System.Windows.Forms.TextBox();
@@ -54,7 +55,8 @@ namespace FeesManagement
 			this.schoolName = new System.Windows.Forms.TextBox();
 			this.schoolFilterButton = new System.Windows.Forms.Button();
 			this.schoolDescription = new System.Windows.Forms.Label();
-			this.panel2 = new System.Windows.Forms.Panel();
+			this.panel3 = new System.Windows.Forms.Panel();
+			this.panel4 = new System.Windows.Forms.Panel();
 			this.panel1.SuspendLayout();
 			this.StudentReport.SuspendLayout();
 			this.StudentPage.SuspendLayout();
@@ -99,10 +101,18 @@ namespace FeesManagement
 			this.StudentPage.Text = "Student";
 			this.StudentPage.UseVisualStyleBackColor = true;
 			// 
+			// panel2
+			// 
+			this.panel2.BackColor = System.Drawing.Color.DimGray;
+			this.panel2.Location = new System.Drawing.Point(257, 6);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(5, 255);
+			this.panel2.TabIndex = 5;
+			// 
 			// studentClass
 			// 
 			this.studentClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.studentClass.Location = new System.Drawing.Point(18, 136);
+			this.studentClass.Location = new System.Drawing.Point(18, 123);
 			this.studentClass.Name = "studentClass";
 			this.studentClass.Size = new System.Drawing.Size(211, 26);
 			this.studentClass.TabIndex = 4;
@@ -111,7 +121,7 @@ namespace FeesManagement
 			// studentBalance
 			// 
 			this.studentBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.studentBalance.Location = new System.Drawing.Point(18, 165);
+			this.studentBalance.Location = new System.Drawing.Point(18, 152);
 			this.studentBalance.Name = "studentBalance";
 			this.studentBalance.Size = new System.Drawing.Size(210, 32);
 			this.studentBalance.TabIndex = 3;
@@ -121,7 +131,7 @@ namespace FeesManagement
 			// studentName
 			// 
 			this.studentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.studentName.Location = new System.Drawing.Point(18, 104);
+			this.studentName.Location = new System.Drawing.Point(18, 91);
 			this.studentName.Name = "studentName";
 			this.studentName.Size = new System.Drawing.Size(211, 26);
 			this.studentName.TabIndex = 2;
@@ -141,7 +151,7 @@ namespace FeesManagement
 			// studentDescription
 			// 
 			this.studentDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.studentDescription.Location = new System.Drawing.Point(18, 19);
+			this.studentDescription.Location = new System.Drawing.Point(18, 6);
 			this.studentDescription.Name = "studentDescription";
 			this.studentDescription.Size = new System.Drawing.Size(211, 92);
 			this.studentDescription.TabIndex = 0;
@@ -149,6 +159,7 @@ namespace FeesManagement
 			// 
 			// ClassPage
 			// 
+			this.ClassPage.Controls.Add(this.panel3);
 			this.ClassPage.Controls.Add(this.classBalance);
 			this.ClassPage.Controls.Add(this.className);
 			this.ClassPage.Controls.Add(this.classFilterBtn);
@@ -156,7 +167,7 @@ namespace FeesManagement
 			this.ClassPage.Location = new System.Drawing.Point(4, 22);
 			this.ClassPage.Name = "ClassPage";
 			this.ClassPage.Padding = new System.Windows.Forms.Padding(3);
-			this.ClassPage.Size = new System.Drawing.Size(263, 267);
+			this.ClassPage.Size = new System.Drawing.Size(812, 267);
 			this.ClassPage.TabIndex = 1;
 			this.ClassPage.Text = "Class";
 			this.ClassPage.UseVisualStyleBackColor = true;
@@ -164,7 +175,7 @@ namespace FeesManagement
 			// classBalance
 			// 
 			this.classBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.classBalance.Location = new System.Drawing.Point(19, 156);
+			this.classBalance.Location = new System.Drawing.Point(19, 136);
 			this.classBalance.Name = "classBalance";
 			this.classBalance.Size = new System.Drawing.Size(210, 33);
 			this.classBalance.TabIndex = 7;
@@ -173,7 +184,7 @@ namespace FeesManagement
 			// className
 			// 
 			this.className.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.className.Location = new System.Drawing.Point(18, 115);
+			this.className.Location = new System.Drawing.Point(19, 92);
 			this.className.Name = "className";
 			this.className.Size = new System.Drawing.Size(211, 26);
 			this.className.TabIndex = 6;
@@ -192,7 +203,7 @@ namespace FeesManagement
 			// classDescription
 			// 
 			this.classDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.classDescription.Location = new System.Drawing.Point(18, 20);
+			this.classDescription.Location = new System.Drawing.Point(18, 6);
 			this.classDescription.Name = "classDescription";
 			this.classDescription.Size = new System.Drawing.Size(211, 92);
 			this.classDescription.TabIndex = 4;
@@ -200,6 +211,7 @@ namespace FeesManagement
 			// 
 			// SchoolPage
 			// 
+			this.SchoolPage.Controls.Add(this.panel4);
 			this.SchoolPage.Controls.Add(this.schoolBalance);
 			this.SchoolPage.Controls.Add(this.schoolName);
 			this.SchoolPage.Controls.Add(this.schoolFilterButton);
@@ -207,7 +219,7 @@ namespace FeesManagement
 			this.SchoolPage.Location = new System.Drawing.Point(4, 22);
 			this.SchoolPage.Name = "SchoolPage";
 			this.SchoolPage.Padding = new System.Windows.Forms.Padding(3);
-			this.SchoolPage.Size = new System.Drawing.Size(263, 267);
+			this.SchoolPage.Size = new System.Drawing.Size(812, 267);
 			this.SchoolPage.TabIndex = 2;
 			this.SchoolPage.Text = "School";
 			this.SchoolPage.UseVisualStyleBackColor = true;
@@ -215,7 +227,7 @@ namespace FeesManagement
 			// schoolBalance
 			// 
 			this.schoolBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.schoolBalance.Location = new System.Drawing.Point(17, 151);
+			this.schoolBalance.Location = new System.Drawing.Point(17, 130);
 			this.schoolBalance.Name = "schoolBalance";
 			this.schoolBalance.Size = new System.Drawing.Size(210, 44);
 			this.schoolBalance.TabIndex = 7;
@@ -224,7 +236,7 @@ namespace FeesManagement
 			// schoolName
 			// 
 			this.schoolName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.schoolName.Location = new System.Drawing.Point(16, 112);
+			this.schoolName.Location = new System.Drawing.Point(17, 101);
 			this.schoolName.Name = "schoolName";
 			this.schoolName.Size = new System.Drawing.Size(211, 26);
 			this.schoolName.TabIndex = 6;
@@ -243,19 +255,27 @@ namespace FeesManagement
 			// schoolDescription
 			// 
 			this.schoolDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.schoolDescription.Location = new System.Drawing.Point(16, 17);
+			this.schoolDescription.Location = new System.Drawing.Point(17, 6);
 			this.schoolDescription.Name = "schoolDescription";
 			this.schoolDescription.Size = new System.Drawing.Size(211, 92);
 			this.schoolDescription.TabIndex = 4;
 			this.schoolDescription.Text = "Showing balance for: ";
 			// 
-			// panel2
+			// panel3
 			// 
-			this.panel2.BackColor = System.Drawing.Color.DimGray;
-			this.panel2.Location = new System.Drawing.Point(289, 6);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(5, 255);
-			this.panel2.TabIndex = 5;
+			this.panel3.BackColor = System.Drawing.Color.DimGray;
+			this.panel3.Location = new System.Drawing.Point(260, 6);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(5, 255);
+			this.panel3.TabIndex = 8;
+			// 
+			// panel4
+			// 
+			this.panel4.BackColor = System.Drawing.Color.DimGray;
+			this.panel4.Location = new System.Drawing.Point(250, 6);
+			this.panel4.Name = "panel4";
+			this.panel4.Size = new System.Drawing.Size(5, 255);
+			this.panel4.TabIndex = 8;
 			// 
 			// ReportsForm
 			// 
@@ -277,6 +297,8 @@ namespace FeesManagement
 			this.SchoolPage.PerformLayout();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Panel panel4;
+		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.TextBox studentClass;
 		private System.Windows.Forms.Label schoolDescription;
