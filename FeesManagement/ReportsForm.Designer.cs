@@ -39,6 +39,7 @@ namespace FeesManagement
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.StudentReport = new System.Windows.Forms.TabControl();
 			this.StudentPage = new System.Windows.Forms.TabPage();
+			this.studentClass = new System.Windows.Forms.TextBox();
 			this.studentBalance = new System.Windows.Forms.Label();
 			this.studentName = new System.Windows.Forms.TextBox();
 			this.studentBalanceBtn = new System.Windows.Forms.Button();
@@ -53,7 +54,7 @@ namespace FeesManagement
 			this.schoolName = new System.Windows.Forms.TextBox();
 			this.schoolFilterButton = new System.Windows.Forms.Button();
 			this.schoolDescription = new System.Windows.Forms.Label();
-			this.studentClass = new System.Windows.Forms.TextBox();
+			this.panel2 = new System.Windows.Forms.Panel();
 			this.panel1.SuspendLayout();
 			this.StudentReport.SuspendLayout();
 			this.StudentPage.SuspendLayout();
@@ -67,7 +68,7 @@ namespace FeesManagement
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(271, 293);
+			this.panel1.Size = new System.Drawing.Size(820, 293);
 			this.panel1.TabIndex = 0;
 			// 
 			// StudentReport
@@ -79,11 +80,12 @@ namespace FeesManagement
 			this.StudentReport.Location = new System.Drawing.Point(0, 0);
 			this.StudentReport.Name = "StudentReport";
 			this.StudentReport.SelectedIndex = 0;
-			this.StudentReport.Size = new System.Drawing.Size(271, 293);
+			this.StudentReport.Size = new System.Drawing.Size(820, 293);
 			this.StudentReport.TabIndex = 0;
 			// 
 			// StudentPage
 			// 
+			this.StudentPage.Controls.Add(this.panel2);
 			this.StudentPage.Controls.Add(this.studentClass);
 			this.StudentPage.Controls.Add(this.studentBalance);
 			this.StudentPage.Controls.Add(this.studentName);
@@ -92,10 +94,19 @@ namespace FeesManagement
 			this.StudentPage.Location = new System.Drawing.Point(4, 22);
 			this.StudentPage.Name = "StudentPage";
 			this.StudentPage.Padding = new System.Windows.Forms.Padding(3);
-			this.StudentPage.Size = new System.Drawing.Size(263, 267);
+			this.StudentPage.Size = new System.Drawing.Size(812, 267);
 			this.StudentPage.TabIndex = 0;
 			this.StudentPage.Text = "Student";
 			this.StudentPage.UseVisualStyleBackColor = true;
+			// 
+			// studentClass
+			// 
+			this.studentClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.studentClass.Location = new System.Drawing.Point(18, 136);
+			this.studentClass.Name = "studentClass";
+			this.studentClass.Size = new System.Drawing.Size(211, 26);
+			this.studentClass.TabIndex = 4;
+			this.studentClass.Text = "Class";
 			// 
 			// studentBalance
 			// 
@@ -238,20 +249,19 @@ namespace FeesManagement
 			this.schoolDescription.TabIndex = 4;
 			this.schoolDescription.Text = "Showing balance for: ";
 			// 
-			// studentClass
+			// panel2
 			// 
-			this.studentClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.studentClass.Location = new System.Drawing.Point(18, 136);
-			this.studentClass.Name = "studentClass";
-			this.studentClass.Size = new System.Drawing.Size(211, 26);
-			this.studentClass.TabIndex = 4;
-			this.studentClass.Text = "Class";
+			this.panel2.BackColor = System.Drawing.Color.DimGray;
+			this.panel2.Location = new System.Drawing.Point(289, 6);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(5, 255);
+			this.panel2.TabIndex = 5;
 			// 
 			// ReportsForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(271, 293);
+			this.ClientSize = new System.Drawing.Size(820, 293);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "ReportsForm";
@@ -267,6 +277,7 @@ namespace FeesManagement
 			this.SchoolPage.PerformLayout();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.TextBox studentClass;
 		private System.Windows.Forms.Label schoolDescription;
 		private System.Windows.Forms.Button schoolFilterButton;

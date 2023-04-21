@@ -79,13 +79,8 @@ namespace FeesManagement
         
         // create dummy data
         private void seedData(){
-            var school = new School { Name = "Harvard High" };
-            var school1 = new School { Name = "MIT High" };
-            var school2 = new School { Name = "Shakaesh High" };
-            
+            var school = new School { Name = "Shakaesh High" };
             AddSchool(school);
-            AddSchool(school1);
-            AddSchool(school2);
         }
 		
 		void Label2Click(object sender, EventArgs e)

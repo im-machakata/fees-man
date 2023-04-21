@@ -145,6 +145,7 @@ namespace FeesManagement
 			this.Username.TabIndex = 1;
 			this.Username.Text = "Username";
 			this.Username.Enter += new System.EventHandler(this.UsernameEnter);
+			this.Username.KeyUp += new System.Windows.Forms.KeyEventHandler(this.UsernameKeyUp);
 			this.Username.Leave += new System.EventHandler(this.UsernameLeave);
 			// 
 			// signInImage

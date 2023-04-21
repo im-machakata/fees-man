@@ -16,6 +16,19 @@ namespace FeesManagement
 		{
 			InitializeComponent();
 		}
+		void ChangeInputColor(RichTextBox Input,string label){
+			if(Input.Text.Trim() == "" || Input.Text.Trim() == label){
+				Input.ForeColor = Color.FromKnownColor(KnownColor.ScrollBar);
+			} else {
+				Input.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
+			}
+		}
+		
+		void SetupLabel(RichTextBox Input,string label){
+			if(Input.Text.Trim() == "" || Input.Text == label){
+				Input.Text = label;
+			}
+		}
 		
 		// Verify if the username & password are correct
 		void LoginBtnClick(object sender, System.EventArgs e)
@@ -42,20 +55,16 @@ namespace FeesManagement
 		{
 			// if user did not enter anything
 			// set text to label
-			if(Password.Text.Trim() == ""){
-				Password.Text = "Password";
-				Password.ForeColor = Color.FromKnownColor(KnownColor.ScrollBar);
-			}
+			ChangeInputColor(Password,"Password");
+			SetupLabel(Password,"Password");
 		}
 		
 		void UsernameLeave(object sender, EventArgs e)
 		{
 			// if user did not enter anything
 			// set text to label
-			if(Username.Text.Trim() == ""){
-				Username.Text = "Username";
-				Username.ForeColor = Color.FromKnownColor(KnownColor.ScrollBar);
-			}
+			ChangeInputColor(Username,"Username");
+			SetupLabel(Username,"Username");
 		}
 		
 		void UsernameEnter(object sender, EventArgs e)
@@ -63,10 +72,8 @@ namespace FeesManagement
 			// clear username in equals default
 			if(Username.Text == "Username"){
 				Username.Clear();
-				Username.ForeColor = Color.FromKnownColor(KnownColor.ScrollBar);
-			} else {
-				Username.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
 			}
+			ChangeInputColor(Username,"Username");
 		}
 		
 		void PasswordEnter(object sender, EventArgs e)
@@ -74,20 +81,24 @@ namespace FeesManagement
 			// clear password input if = label
 			if(Password.Text == "Password"){
 				Password.Clear();
-				Password.ForeColor = Color.FromKnownColor(KnownColor.ScrollBar);
-			} else {
-				Username.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
 			}
+			ChangeInputColor(Password,"Password");
 		}
 		
 		void PasswordKeyUp(object sender, KeyEventArgs e)
 		{
+			ChangeInputColor(Password,"Password");
 			// if user presses enter
 			// trigger login
 			if (e.KeyCode == Keys.Enter)
 		    {
 				loginBtn.PerformClick();
 		    }
+		}
+		
+		void UsernameKeyUp(object sender, KeyEventArgs e)
+		{
+			ChangeInputColor(Username,"Username");
 		}
 	}
 }
