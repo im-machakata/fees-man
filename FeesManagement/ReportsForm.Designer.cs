@@ -50,7 +50,7 @@ namespace FeesManagement
 			this.classDescription = new System.Windows.Forms.Label();
 			this.SchoolPage = new System.Windows.Forms.TabPage();
 			this.schoolBalance = new System.Windows.Forms.Label();
-			this.schooltName = new System.Windows.Forms.TextBox();
+			this.schoolName = new System.Windows.Forms.TextBox();
 			this.schoolFilterButton = new System.Windows.Forms.Button();
 			this.schoolDescription = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
@@ -122,6 +122,7 @@ namespace FeesManagement
 			this.studentBalanceBtn.TabIndex = 1;
 			this.studentBalanceBtn.Text = "Find Balance";
 			this.studentBalanceBtn.UseVisualStyleBackColor = true;
+			this.studentBalanceBtn.Click += new System.EventHandler(this.StudentBalanceBtnClick);
 			// 
 			// studentDescription
 			// 
@@ -172,6 +173,7 @@ namespace FeesManagement
 			this.classFilterBtn.TabIndex = 5;
 			this.classFilterBtn.Text = "Find Balance";
 			this.classFilterBtn.UseVisualStyleBackColor = true;
+			this.classFilterBtn.Click += new System.EventHandler(this.ClassFilterBtnClick);
 			// 
 			// classDescription
 			// 
@@ -185,7 +187,7 @@ namespace FeesManagement
 			// SchoolPage
 			// 
 			this.SchoolPage.Controls.Add(this.schoolBalance);
-			this.SchoolPage.Controls.Add(this.schooltName);
+			this.SchoolPage.Controls.Add(this.schoolName);
 			this.SchoolPage.Controls.Add(this.schoolFilterButton);
 			this.SchoolPage.Controls.Add(this.schoolDescription);
 			this.SchoolPage.Location = new System.Drawing.Point(4, 22);
@@ -205,13 +207,13 @@ namespace FeesManagement
 			this.schoolBalance.TabIndex = 7;
 			this.schoolBalance.Text = "$0.00";
 			// 
-			// schooltName
+			// schoolName
 			// 
-			this.schooltName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.schooltName.Location = new System.Drawing.Point(16, 112);
-			this.schooltName.Name = "schooltName";
-			this.schooltName.Size = new System.Drawing.Size(211, 26);
-			this.schooltName.TabIndex = 6;
+			this.schoolName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.schoolName.Location = new System.Drawing.Point(16, 112);
+			this.schoolName.Name = "schoolName";
+			this.schoolName.Size = new System.Drawing.Size(211, 26);
+			this.schoolName.TabIndex = 6;
 			// 
 			// schoolFilterButton
 			// 
@@ -222,6 +224,7 @@ namespace FeesManagement
 			this.schoolFilterButton.TabIndex = 5;
 			this.schoolFilterButton.Text = "Find Balance";
 			this.schoolFilterButton.UseVisualStyleBackColor = true;
+			this.schoolFilterButton.Click += new System.EventHandler(this.SchoolFilterButtonClick);
 			// 
 			// schoolDescription
 			// 
@@ -255,7 +258,7 @@ namespace FeesManagement
 		}
 		private System.Windows.Forms.Label schoolDescription;
 		private System.Windows.Forms.Button schoolFilterButton;
-		private System.Windows.Forms.TextBox schooltName;
+		private System.Windows.Forms.TextBox schoolName;
 		private System.Windows.Forms.Label schoolBalance;
 		private System.Windows.Forms.Label classDescription;
 		private System.Windows.Forms.Button classFilterBtn;

@@ -97,5 +97,35 @@ namespace FeesManagement
 		{
 			this.Close();
 		}
+		
+		void StudentBalanceBtnClick(object sender, EventArgs e)
+		{
+			// filter student balance	
+			if(studentName.Text.trim() == ""){
+				MessageBox("Enter a student name","Alert");
+			} else {
+				// calculate balance
+			}
+		}
+		
+		void ClassFilterBtnClick(object sender, EventArgs e)
+		{
+			// filter class balance			
+			if(className.Text.trim() == ""){
+				MessageBox("Enter a class name","Alert");
+			} else {
+				// calculate balance
+			}
+		}
+		
+		void SchoolFilterButtonClick(object sender, EventArgs e)
+		{
+			// filter school balance		
+			if(schoolName.Text.trim() == ""){
+				MessageBox("Enter a class name","Alert");
+			} else {
+				// calculate balance
+			}
+		}
     }
 }
