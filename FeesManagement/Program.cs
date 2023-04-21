@@ -1,12 +1,4 @@
-﻿/*
- * Created by SharpDevelop.
- * User: Caasi
- * Date: 3/30/2023
- * Time: 4:30 AM
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace FeesManagement
