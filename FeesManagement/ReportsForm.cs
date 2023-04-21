@@ -23,7 +23,8 @@ namespace FeesManagement
             Schools.Add(school);
         }
 
-        public School FindSchoolByName(string name,bool add)
+        // find schoo by name & or create one
+        public School FindSchoolByName(string name,bool add = false)
         {
             var exists = Schools.FirstOrDefault(x => x.Name.Equals(name));
             if(exists == null && add) {
@@ -46,6 +47,7 @@ namespace FeesManagement
             }
             return null;
         }
+        
         public string CreateStudentID(string className, School school)
         {
         	int occurences = 1;
@@ -60,7 +62,7 @@ namespace FeesManagement
 
         public void AddStudentToClass(Student student, string className)
         {
-            var school = FindSchoolByName(className);
+            var school = FindSchoolByName(className,true);
             school.Students.Add(student);
         }
 
