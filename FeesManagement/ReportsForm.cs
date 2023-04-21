@@ -93,11 +93,6 @@ namespace FeesManagement
 			
 		}
 		
-		void ReportsFormFormClosing(object sender, FormClosingEventArgs e)
-		{
-			this.Close();
-		}
-		
 		void StudentBalanceBtnClick(object sender, EventArgs e)
 		{
 			// filter student balance	
