@@ -23,9 +23,15 @@ namespace FeesManagement
             Schools.Add(school);
         }
 
-        public School FindSchoolByName(string name)
+        public School FindSchoolByName(string name,bool add)
         {
-            return Schools.FirstOrDefault(x => x.Name.Equals(name));
+            var exists = Schools.FirstOrDefault(x => x.Name.Equals(name));
+            if(exists == null && add) {
+                school = new School { Name = name };
+                AddSchool(school);
+                return true;
+            }
+            return exists;
         }
 
         public Student FindStudentById(int id)
@@ -40,29 +46,21 @@ namespace FeesManagement
             }
             return null;
         }
-        public string CreateStudentID(int className)
+        public string CreateStudentID(string className, School school)
         {
         	int occurences = 1;
-        	string name="";
             foreach (var school in Schools)
             {
-                var student = school.Students.FirstOrDefault(x => x.ClassId == id);
-                if (student != null)
-                {
-                    occurences++;
-                }
+                var student = school.Students.Where(x => x.ClassId == id);
+                occurences+=student.Count();
             }
-            return className +occurences.ToString();
+            string name = occurences<10?
+            return className + occurences.ToString();
         }
 
         public void AddStudentToClass(Student student, string className)
         {
             var school = FindSchoolByName(className);
-            if (school == null)
-            {
-                school = new School { Name = className };
-                AddSchool(school);
-            }
             school.Students.Add(student);
         }
 
