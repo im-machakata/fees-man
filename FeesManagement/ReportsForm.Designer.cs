@@ -39,20 +39,20 @@ namespace FeesManagement
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.StudentReport = new System.Windows.Forms.TabControl();
 			this.StudentPage = new System.Windows.Forms.TabPage();
-			this.label2 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
+			this.studentBalance = new System.Windows.Forms.Label();
+			this.studentName = new System.Windows.Forms.TextBox();
+			this.studentBalanceBtn = new System.Windows.Forms.Button();
+			this.studentDescription = new System.Windows.Forms.Label();
 			this.ClassPage = new System.Windows.Forms.TabPage();
-			this.label3 = new System.Windows.Forms.Label();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.button2 = new System.Windows.Forms.Button();
-			this.label4 = new System.Windows.Forms.Label();
+			this.classBalance = new System.Windows.Forms.Label();
+			this.className = new System.Windows.Forms.TextBox();
+			this.classFilterBtn = new System.Windows.Forms.Button();
+			this.classDescription = new System.Windows.Forms.Label();
 			this.SchoolPage = new System.Windows.Forms.TabPage();
-			this.label5 = new System.Windows.Forms.Label();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.button3 = new System.Windows.Forms.Button();
-			this.label6 = new System.Windows.Forms.Label();
+			this.schoolBalance = new System.Windows.Forms.Label();
+			this.schooltName = new System.Windows.Forms.TextBox();
+			this.schoolFilterButton = new System.Windows.Forms.Button();
+			this.schoolDescription = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.StudentReport.SuspendLayout();
 			this.StudentPage.SuspendLayout();
@@ -83,60 +83,61 @@ namespace FeesManagement
 			// 
 			// StudentPage
 			// 
-			this.StudentPage.Controls.Add(this.label2);
-			this.StudentPage.Controls.Add(this.textBox1);
-			this.StudentPage.Controls.Add(this.button1);
-			this.StudentPage.Controls.Add(this.label1);
+			this.StudentPage.Controls.Add(this.studentBalance);
+			this.StudentPage.Controls.Add(this.studentName);
+			this.StudentPage.Controls.Add(this.studentBalanceBtn);
+			this.StudentPage.Controls.Add(this.studentDescription);
 			this.StudentPage.Location = new System.Drawing.Point(4, 22);
 			this.StudentPage.Name = "StudentPage";
 			this.StudentPage.Padding = new System.Windows.Forms.Padding(3);
-			this.StudentPage.Size = new System.Drawing.Size(509, 267);
+			this.StudentPage.Size = new System.Drawing.Size(263, 267);
 			this.StudentPage.TabIndex = 0;
 			this.StudentPage.Text = "Student";
 			this.StudentPage.UseVisualStyleBackColor = true;
 			// 
-			// label2
+			// studentBalance
 			// 
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(19, 163);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(210, 23);
-			this.label2.TabIndex = 3;
-			this.label2.Text = "$0.00";
-			this.label2.Click += new System.EventHandler(this.Label2Click);
+			this.studentBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.studentBalance.Location = new System.Drawing.Point(18, 156);
+			this.studentBalance.Name = "studentBalance";
+			this.studentBalance.Size = new System.Drawing.Size(210, 32);
+			this.studentBalance.TabIndex = 3;
+			this.studentBalance.Text = "$0.00";
+			this.studentBalance.Click += new System.EventHandler(this.Label2Click);
 			// 
-			// textBox1
+			// studentName
 			// 
-			this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox1.Location = new System.Drawing.Point(18, 114);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(211, 26);
-			this.textBox1.TabIndex = 2;
+			this.studentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.studentName.Location = new System.Drawing.Point(18, 114);
+			this.studentName.Name = "studentName";
+			this.studentName.Size = new System.Drawing.Size(211, 26);
+			this.studentName.TabIndex = 2;
 			// 
-			// button1
+			// studentBalanceBtn
 			// 
-			this.button1.Location = new System.Drawing.Point(19, 210);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(210, 29);
-			this.button1.TabIndex = 1;
-			this.button1.Text = "Find Balance";
-			this.button1.UseVisualStyleBackColor = true;
+			this.studentBalanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.studentBalanceBtn.Location = new System.Drawing.Point(18, 205);
+			this.studentBalanceBtn.Name = "studentBalanceBtn";
+			this.studentBalanceBtn.Size = new System.Drawing.Size(210, 38);
+			this.studentBalanceBtn.TabIndex = 1;
+			this.studentBalanceBtn.Text = "Find Balance";
+			this.studentBalanceBtn.UseVisualStyleBackColor = true;
 			// 
-			// label1
+			// studentDescription
 			// 
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(18, 19);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(211, 110);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Showing balance for: ";
+			this.studentDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.studentDescription.Location = new System.Drawing.Point(18, 19);
+			this.studentDescription.Name = "studentDescription";
+			this.studentDescription.Size = new System.Drawing.Size(211, 92);
+			this.studentDescription.TabIndex = 0;
+			this.studentDescription.Text = "Showing balance for: ";
 			// 
 			// ClassPage
 			// 
-			this.ClassPage.Controls.Add(this.label3);
-			this.ClassPage.Controls.Add(this.textBox2);
-			this.ClassPage.Controls.Add(this.button2);
-			this.ClassPage.Controls.Add(this.label4);
+			this.ClassPage.Controls.Add(this.classBalance);
+			this.ClassPage.Controls.Add(this.className);
+			this.ClassPage.Controls.Add(this.classFilterBtn);
+			this.ClassPage.Controls.Add(this.classDescription);
 			this.ClassPage.Location = new System.Drawing.Point(4, 22);
 			this.ClassPage.Name = "ClassPage";
 			this.ClassPage.Padding = new System.Windows.Forms.Padding(3);
@@ -145,89 +146,91 @@ namespace FeesManagement
 			this.ClassPage.Text = "Class";
 			this.ClassPage.UseVisualStyleBackColor = true;
 			// 
-			// label3
+			// classBalance
 			// 
-			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(19, 164);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(210, 23);
-			this.label3.TabIndex = 7;
-			this.label3.Text = "$0.00";
+			this.classBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.classBalance.Location = new System.Drawing.Point(19, 156);
+			this.classBalance.Name = "classBalance";
+			this.classBalance.Size = new System.Drawing.Size(210, 33);
+			this.classBalance.TabIndex = 7;
+			this.classBalance.Text = "$0.00";
 			// 
-			// textBox2
+			// className
 			// 
-			this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox2.Location = new System.Drawing.Point(18, 115);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(211, 26);
-			this.textBox2.TabIndex = 6;
+			this.className.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.className.Location = new System.Drawing.Point(18, 115);
+			this.className.Name = "className";
+			this.className.Size = new System.Drawing.Size(211, 26);
+			this.className.TabIndex = 6;
 			// 
-			// button2
+			// classFilterBtn
 			// 
-			this.button2.Location = new System.Drawing.Point(19, 211);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(210, 29);
-			this.button2.TabIndex = 5;
-			this.button2.Text = "Find Balance";
-			this.button2.UseVisualStyleBackColor = true;
+			this.classFilterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.classFilterBtn.Location = new System.Drawing.Point(19, 206);
+			this.classFilterBtn.Name = "classFilterBtn";
+			this.classFilterBtn.Size = new System.Drawing.Size(210, 39);
+			this.classFilterBtn.TabIndex = 5;
+			this.classFilterBtn.Text = "Find Balance";
+			this.classFilterBtn.UseVisualStyleBackColor = true;
 			// 
-			// label4
+			// classDescription
 			// 
-			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(18, 20);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(211, 110);
-			this.label4.TabIndex = 4;
-			this.label4.Text = "Showing balance for: ";
+			this.classDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.classDescription.Location = new System.Drawing.Point(18, 20);
+			this.classDescription.Name = "classDescription";
+			this.classDescription.Size = new System.Drawing.Size(211, 92);
+			this.classDescription.TabIndex = 4;
+			this.classDescription.Text = "Showing balance for: ";
 			// 
 			// SchoolPage
 			// 
-			this.SchoolPage.Controls.Add(this.label5);
-			this.SchoolPage.Controls.Add(this.textBox3);
-			this.SchoolPage.Controls.Add(this.button3);
-			this.SchoolPage.Controls.Add(this.label6);
+			this.SchoolPage.Controls.Add(this.schoolBalance);
+			this.SchoolPage.Controls.Add(this.schooltName);
+			this.SchoolPage.Controls.Add(this.schoolFilterButton);
+			this.SchoolPage.Controls.Add(this.schoolDescription);
 			this.SchoolPage.Location = new System.Drawing.Point(4, 22);
 			this.SchoolPage.Name = "SchoolPage";
 			this.SchoolPage.Padding = new System.Windows.Forms.Padding(3);
-			this.SchoolPage.Size = new System.Drawing.Size(509, 267);
+			this.SchoolPage.Size = new System.Drawing.Size(263, 267);
 			this.SchoolPage.TabIndex = 2;
 			this.SchoolPage.Text = "School";
 			this.SchoolPage.UseVisualStyleBackColor = true;
 			// 
-			// label5
+			// schoolBalance
 			// 
-			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(17, 161);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(210, 23);
-			this.label5.TabIndex = 7;
-			this.label5.Text = "$0.00";
+			this.schoolBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.schoolBalance.Location = new System.Drawing.Point(17, 151);
+			this.schoolBalance.Name = "schoolBalance";
+			this.schoolBalance.Size = new System.Drawing.Size(210, 44);
+			this.schoolBalance.TabIndex = 7;
+			this.schoolBalance.Text = "$0.00";
 			// 
-			// textBox3
+			// schooltName
 			// 
-			this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox3.Location = new System.Drawing.Point(16, 112);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(211, 26);
-			this.textBox3.TabIndex = 6;
+			this.schooltName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.schooltName.Location = new System.Drawing.Point(16, 112);
+			this.schooltName.Name = "schooltName";
+			this.schooltName.Size = new System.Drawing.Size(211, 26);
+			this.schooltName.TabIndex = 6;
 			// 
-			// button3
+			// schoolFilterButton
 			// 
-			this.button3.Location = new System.Drawing.Point(17, 208);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(210, 29);
-			this.button3.TabIndex = 5;
-			this.button3.Text = "Find Balance";
-			this.button3.UseVisualStyleBackColor = true;
+			this.schoolFilterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.schoolFilterButton.Location = new System.Drawing.Point(17, 198);
+			this.schoolFilterButton.Name = "schoolFilterButton";
+			this.schoolFilterButton.Size = new System.Drawing.Size(210, 42);
+			this.schoolFilterButton.TabIndex = 5;
+			this.schoolFilterButton.Text = "Find Balance";
+			this.schoolFilterButton.UseVisualStyleBackColor = true;
 			// 
-			// label6
+			// schoolDescription
 			// 
-			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(16, 17);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(211, 110);
-			this.label6.TabIndex = 4;
-			this.label6.Text = "Showing balance for: ";
+			this.schoolDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.schoolDescription.Location = new System.Drawing.Point(16, 17);
+			this.schoolDescription.Name = "schoolDescription";
+			this.schoolDescription.Size = new System.Drawing.Size(211, 92);
+			this.schoolDescription.TabIndex = 4;
+			this.schoolDescription.Text = "Showing balance for: ";
 			// 
 			// ReportsForm
 			// 
@@ -250,18 +253,18 @@ namespace FeesManagement
 			this.SchoolPage.PerformLayout();
 			this.ResumeLayout(false);
 		}
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Label schoolDescription;
+		private System.Windows.Forms.Button schoolFilterButton;
+		private System.Windows.Forms.TextBox schooltName;
+		private System.Windows.Forms.Label schoolBalance;
+		private System.Windows.Forms.Label classDescription;
+		private System.Windows.Forms.Button classFilterBtn;
+		private System.Windows.Forms.TextBox className;
+		private System.Windows.Forms.Label classBalance;
+		private System.Windows.Forms.TextBox studentName;
+		private System.Windows.Forms.Label studentBalance;
+		private System.Windows.Forms.Label studentDescription;
+		private System.Windows.Forms.Button studentBalanceBtn;
 		private System.Windows.Forms.TabPage SchoolPage;
 		private System.Windows.Forms.TabPage ClassPage;
 		private System.Windows.Forms.TabPage StudentPage;

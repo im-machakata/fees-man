@@ -11,6 +11,7 @@ namespace FeesManagement.Models
 
         public Classes()
         {
+        	// do something
         }
     }
 }
