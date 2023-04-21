@@ -63,7 +63,9 @@ namespace FeesManagement
 			// clear username in equals default
 			if(Username.Text == "Username"){
 				Username.Clear();
-				Username.ForeColor = Color.FromKnownColor(KnownColor.ControlText);;
+				Username.ForeColor = Color.FromKnownColor(KnownColor.ScrollBar);
+			} else {
+				Username.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
 			}
 		}
 		
@@ -72,7 +74,9 @@ namespace FeesManagement
 			// clear password input if = label
 			if(Password.Text == "Password"){
 				Password.Clear();
-				Password.ForeColor = Color.FromKnownColor(KnownColor.ControlText);;
+				Password.ForeColor = Color.FromKnownColor(KnownColor.ScrollBar);
+			} else {
+				Username.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
 			}
 		}
 		
