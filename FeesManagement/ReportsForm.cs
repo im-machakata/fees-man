@@ -28,9 +28,9 @@ namespace FeesManagement
         {
             var exists = Schools.FirstOrDefault(x => x.Name.Equals(name));
             if(exists == null && add) {
-                school = new School { Name = name };
+                var school = new School { Name = name };
                 AddSchool(school);
-                return true;
+                return school;
             }
             return exists;
         }
@@ -48,16 +48,22 @@ namespace FeesManagement
             return null;
         }
         
-        public string CreateStudentID(string className, School school)
+        public string CreateStudentID(string className, School school_choice)
         {
+        	// find number of stuents in class at school
         	int occurences = 1;
             foreach (var school in Schools)
             {
-                var student = school.Students.Where(x => x.ClassId == id);
+            	// only fetch data from the mentioned school
+            	if(school_choice.Name != school.Name) continue;
+            	
+            	// count number of students with classID
+                var student = school.Students.Where(x => x.Name == className);
                 occurences+=student.Count();
             }
-            string name = occurences<10?
-            return className + occurences.ToString();
+            string name = occurences<10?"00":"0";
+            name = occurences>90?"":"0";
+            return String.Concat(className,name,occurences.ToString());
         }
 
         public void AddStudentToClass(Student student, string className)
@@ -72,8 +78,8 @@ namespace FeesManagement
         }
         private void seedData(){
             var school = new School { Name = "Harvard High" };
-            school1 = new School { Name = "MIT High" };
-            school2 = new School { Name = "Shakaesh High" };
+            var school1 = new School { Name = "MIT High" };
+            var school2 = new School { Name = "Shakaesh High" };
             
             AddSchool(school);
             AddSchool(school1);
