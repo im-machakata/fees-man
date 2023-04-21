@@ -76,6 +76,8 @@ namespace FeesManagement
         {
             student.FeesBalance = balance;
         }
+        
+        // create dummy data
         private void seedData(){
             var school = new School { Name = "Harvard High" };
             var school1 = new School { Name = "MIT High" };
