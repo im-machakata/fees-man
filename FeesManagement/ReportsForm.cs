@@ -87,5 +87,15 @@ namespace FeesManagement
             AddSchool(school1);
             AddSchool(school2);
         }
+		
+		void Label2Click(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void ReportsFormFormClosing(object sender, FormClosingEventArgs e)
+		{
+			this.Close();
+		}
     }
 }
