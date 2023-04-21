@@ -5,9 +5,6 @@ using System.Windows.Forms;
 
 namespace FeesManagement
 {
-	/// <summary>
-	/// Description of MainForm.
-	/// </summary>
 	public partial class MainForm : Form
 	{
 		// store the default username & password
@@ -17,19 +14,10 @@ namespace FeesManagement
 		
 		public MainForm()
 		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
 			InitializeComponent();
-			
-			//
-			// Add constructor code after the InitializeComponent() call.
-			//
 		}
 		
-		// 
 		// Verify if the username & password are correct
-		//
 		void LoginBtnClick(object sender, System.EventArgs e)
 		{
 			if(Username.Text == USERNAME && Password.Text == PASSWORD){
@@ -44,10 +32,7 @@ namespace FeesManagement
 			}
 		}
 		
-		
-		//
 		// Close the application when clicked
-		//
 		void ExitBtnClick(object sender, EventArgs e)
 		{
 			this.Close();
@@ -87,16 +72,15 @@ namespace FeesManagement
 			// clear password input if = label
 			if(Password.Text == "Password"){
 				Password.Clear();
-				Username.ForeColor = Color.FromKnownColor(KnownColor.ControlText);;
+				Password.ForeColor = Color.FromKnownColor(KnownColor.ControlText);;
 			}
 		}
 		
 		void PasswordKeyUp(object sender, KeyEventArgs e)
 		{
-			// if user presses the enter
+			// if user presses enter
 			// trigger login
 			if (e.KeyCode == Keys.Enter)
-				
 		    {
 				loginBtn.PerformClick();
 		    }
