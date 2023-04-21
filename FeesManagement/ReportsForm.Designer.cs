@@ -44,11 +44,11 @@ namespace FeesManagement
 			this.button1 = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.ClassPage = new System.Windows.Forms.TabPage();
-			this.SchoolPage = new System.Windows.Forms.TabPage();
 			this.label3 = new System.Windows.Forms.Label();
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.button2 = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
+			this.SchoolPage = new System.Windows.Forms.TabPage();
 			this.label5 = new System.Windows.Forms.Label();
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.button3 = new System.Windows.Forms.Button();
@@ -66,7 +66,7 @@ namespace FeesManagement
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(708, 293);
+			this.panel1.Size = new System.Drawing.Size(271, 293);
 			this.panel1.TabIndex = 0;
 			// 
 			// StudentReport
@@ -78,7 +78,7 @@ namespace FeesManagement
 			this.StudentReport.Location = new System.Drawing.Point(0, 0);
 			this.StudentReport.Name = "StudentReport";
 			this.StudentReport.SelectedIndex = 0;
-			this.StudentReport.Size = new System.Drawing.Size(708, 293);
+			this.StudentReport.Size = new System.Drawing.Size(271, 293);
 			this.StudentReport.TabIndex = 0;
 			// 
 			// StudentPage
@@ -90,7 +90,7 @@ namespace FeesManagement
 			this.StudentPage.Location = new System.Drawing.Point(4, 22);
 			this.StudentPage.Name = "StudentPage";
 			this.StudentPage.Padding = new System.Windows.Forms.Padding(3);
-			this.StudentPage.Size = new System.Drawing.Size(700, 267);
+			this.StudentPage.Size = new System.Drawing.Size(509, 267);
 			this.StudentPage.TabIndex = 0;
 			this.StudentPage.Text = "Student";
 			this.StudentPage.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@ namespace FeesManagement
 			// label2
 			// 
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(249, 169);
+			this.label2.Location = new System.Drawing.Point(19, 163);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(210, 23);
 			this.label2.TabIndex = 3;
@@ -108,14 +108,14 @@ namespace FeesManagement
 			// textBox1
 			// 
 			this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox1.Location = new System.Drawing.Point(248, 120);
+			this.textBox1.Location = new System.Drawing.Point(18, 114);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(211, 26);
 			this.textBox1.TabIndex = 2;
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(249, 216);
+			this.button1.Location = new System.Drawing.Point(19, 210);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(210, 29);
 			this.button1.TabIndex = 1;
@@ -125,7 +125,7 @@ namespace FeesManagement
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(248, 25);
+			this.label1.Location = new System.Drawing.Point(18, 19);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(211, 110);
 			this.label1.TabIndex = 0;
@@ -140,10 +140,45 @@ namespace FeesManagement
 			this.ClassPage.Location = new System.Drawing.Point(4, 22);
 			this.ClassPage.Name = "ClassPage";
 			this.ClassPage.Padding = new System.Windows.Forms.Padding(3);
-			this.ClassPage.Size = new System.Drawing.Size(700, 267);
+			this.ClassPage.Size = new System.Drawing.Size(263, 267);
 			this.ClassPage.TabIndex = 1;
 			this.ClassPage.Text = "Class";
 			this.ClassPage.UseVisualStyleBackColor = true;
+			// 
+			// label3
+			// 
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(19, 164);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(210, 23);
+			this.label3.TabIndex = 7;
+			this.label3.Text = "$0.00";
+			// 
+			// textBox2
+			// 
+			this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox2.Location = new System.Drawing.Point(18, 115);
+			this.textBox2.Name = "textBox2";
+			this.textBox2.Size = new System.Drawing.Size(211, 26);
+			this.textBox2.TabIndex = 6;
+			// 
+			// button2
+			// 
+			this.button2.Location = new System.Drawing.Point(19, 211);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(210, 29);
+			this.button2.TabIndex = 5;
+			this.button2.Text = "Find Balance";
+			this.button2.UseVisualStyleBackColor = true;
+			// 
+			// label4
+			// 
+			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.Location = new System.Drawing.Point(18, 20);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(211, 110);
+			this.label4.TabIndex = 4;
+			this.label4.Text = "Showing balance for: ";
 			// 
 			// SchoolPage
 			// 
@@ -154,50 +189,15 @@ namespace FeesManagement
 			this.SchoolPage.Location = new System.Drawing.Point(4, 22);
 			this.SchoolPage.Name = "SchoolPage";
 			this.SchoolPage.Padding = new System.Windows.Forms.Padding(3);
-			this.SchoolPage.Size = new System.Drawing.Size(700, 267);
+			this.SchoolPage.Size = new System.Drawing.Size(509, 267);
 			this.SchoolPage.TabIndex = 2;
 			this.SchoolPage.Text = "School";
 			this.SchoolPage.UseVisualStyleBackColor = true;
 			// 
-			// label3
-			// 
-			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(246, 167);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(210, 23);
-			this.label3.TabIndex = 7;
-			this.label3.Text = "$0.00";
-			// 
-			// textBox2
-			// 
-			this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox2.Location = new System.Drawing.Point(245, 118);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(211, 26);
-			this.textBox2.TabIndex = 6;
-			// 
-			// button2
-			// 
-			this.button2.Location = new System.Drawing.Point(246, 214);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(210, 29);
-			this.button2.TabIndex = 5;
-			this.button2.Text = "Find Balance";
-			this.button2.UseVisualStyleBackColor = true;
-			// 
-			// label4
-			// 
-			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(245, 23);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(211, 110);
-			this.label4.TabIndex = 4;
-			this.label4.Text = "Showing balance for: ";
-			// 
 			// label5
 			// 
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(246, 167);
+			this.label5.Location = new System.Drawing.Point(17, 161);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(210, 23);
 			this.label5.TabIndex = 7;
@@ -206,14 +206,14 @@ namespace FeesManagement
 			// textBox3
 			// 
 			this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox3.Location = new System.Drawing.Point(245, 118);
+			this.textBox3.Location = new System.Drawing.Point(16, 112);
 			this.textBox3.Name = "textBox3";
 			this.textBox3.Size = new System.Drawing.Size(211, 26);
 			this.textBox3.TabIndex = 6;
 			// 
 			// button3
 			// 
-			this.button3.Location = new System.Drawing.Point(246, 214);
+			this.button3.Location = new System.Drawing.Point(17, 208);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(210, 29);
 			this.button3.TabIndex = 5;
@@ -223,7 +223,7 @@ namespace FeesManagement
 			// label6
 			// 
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(245, 23);
+			this.label6.Location = new System.Drawing.Point(16, 17);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(211, 110);
 			this.label6.TabIndex = 4;
@@ -233,9 +233,9 @@ namespace FeesManagement
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(708, 293);
+			this.ClientSize = new System.Drawing.Size(271, 293);
 			this.Controls.Add(this.panel1);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "ReportsForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Reports";
