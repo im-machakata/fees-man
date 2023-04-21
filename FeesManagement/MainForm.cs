@@ -17,7 +17,8 @@ namespace FeesManagement
 			InitializeComponent();
 		}
 		void ChangeInputColor(RichTextBox Input,string label){
-			if(Input.Text.Trim() == "" || Input.Text.Trim() == label){
+			bool isLabel = Input.Text.Trim() == label;
+			if(Input.Text.Trim() == "" || isLabel){
 				Input.ForeColor = Color.FromKnownColor(KnownColor.ScrollBar);
 			} else {
 				Input.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
@@ -28,6 +29,11 @@ namespace FeesManagement
 			if(Input.Text.Trim() == "" || Input.Text == label){
 				Input.Text = label;
 			}
+		}
+		
+		void resetInputColors(){
+			ChangeInputColor(Password,"Password");
+			ChangeInputColor(Username,"Username");
 		}
 		
 		// Verify if the username & password are correct
@@ -42,6 +48,9 @@ namespace FeesManagement
 				// reset inputs to labels
 				Username.Text = "Username";
 				Password.Text = "Password";
+				
+				// Change colors
+				resetInputColors();
 			}
 		}
 		

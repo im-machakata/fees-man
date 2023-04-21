@@ -93,7 +93,7 @@ namespace FeesManagement
 			// filter student balance	
 			if(studentName.Text.Trim() == ""){
 				MessageBox.Show("Enter a student name","Alert");
-			} else if (studentName.Text.Trim() == "//"){
+			} else if (studentClass.Text.Trim() == "//"){
 				MessageBox.Show("Student not found","Ooops");
 			} else {
 				// calculate balance
