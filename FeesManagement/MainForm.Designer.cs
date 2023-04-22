@@ -1,12 +1,4 @@
 ﻿using System.Windows.Forms;
-/*
- * Created by SharpDevelop.
- * User: Caasi
- * Date: 3/30/2023
- * Time: 4:30 AM
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
 namespace FeesManagement
 {
 	partial class MainForm
