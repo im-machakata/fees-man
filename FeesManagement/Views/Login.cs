@@ -45,9 +45,11 @@ namespace FeesManagement.Views
 		// Verify if the username & password are correct
 		void LoginBtnClick(object sender, System.EventArgs e)
 		{
+			// username & password are in the Config file
+			// found in the Models folder
 			if(Username.Text == Config.Username && Password.Text == Config.Password){
-				Reports reportsForm = new Reports();
-        		reportsForm.Show();
+				Reports reports = new Reports();
+        		reports.Show();
         		this.Hide();
 			} else {
 				MessageBox.Show("Username or password is incorrect","Warning!",MessageBoxButtons.OK);
