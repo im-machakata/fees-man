@@ -7,12 +7,7 @@ using FeesManagement.Models;
 namespace FeesManagement
 {
 	public partial class MainForm : Form
-	{
-		// store the default username & password
-		// we use constant strings so that the values are not be accidentally changed later in the program
-		const string USERNAME ="block2023";
-		const string PASSWORD ="2023";
-		
+	{		
 		public MainForm()
 		{
 			InitializeComponent();
