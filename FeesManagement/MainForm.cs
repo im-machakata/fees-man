@@ -16,6 +16,7 @@ namespace FeesManagement
 		{
 			InitializeComponent();
 		}
+		
 		void ChangeInputColor(RichTextBox Input,string Label){
 			if(Utils.isEmpty(Input) || Utils.isLabel(Input,Label)){
 				Input.ForeColor = Color.FromKnownColor(KnownColor.ScrollBar);
@@ -78,7 +79,7 @@ namespace FeesManagement
 		void UsernameEnter(object sender, EventArgs e)
 		{
 			// clear username in equals default
-			if(Username.Text == "Username"){
+			if(Utils.isLabel(Username,"Username")){
 				Username.Clear();
 			}
 			ChangeInputColor(Username,"Username");
@@ -87,7 +88,7 @@ namespace FeesManagement
 		void PasswordEnter(object sender, EventArgs e)
 		{
 			// clear password input if = label
-			if(Password.Text == "Password"){
+			if(Utils.isLabel(Password,"Password")){
 				Password.Clear();
 			}
 			ChangeInputColor(Password,"Password");
