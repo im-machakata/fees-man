@@ -21,7 +21,7 @@ namespace FeesManagement.Components
 		string value;
 		
 		public string Value {
-			get { return value; }
+			get { return CInput.Text.Trim(); }
 		}
 		public CustomInput(string Label)
 		{
