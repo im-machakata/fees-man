@@ -64,6 +64,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\CustomInput.cs" />
+    <Compile Include="Components\CustomInput.Designer.cs">
+      <DependentUpon>CustomInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Classes.cs" />
     <Compile Include="Models\Config.cs" />
     <Compile Include="Models\School.cs" />
@@ -81,6 +85,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Components\CustomInput.resx">
+      <DependentUpon>CustomInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models" />
+    <Folder Include="Components" />
     <Folder Include="Views" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
