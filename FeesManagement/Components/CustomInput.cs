@@ -18,7 +18,6 @@ namespace FeesManagement.Components
 	/// </summary>
 	public partial class CustomInput : UserControl
 	{
-		string value;
 		
 		public string Value {
 			get { return CInput.Text.Trim(); }
