@@ -89,7 +89,7 @@ namespace FeesManagement.Views
 		void StudentBalanceBtnClick(object sender, EventArgs e)
 		{
 			// filter student balance	
-			if(studentName.Text.Trim() == ""){
+			if(Utils.isEmpty(studentClass)){
 				MessageBox.Show("Enter a student name","Alert");
 			} else if (studentClass.Text.Trim() == "//"){
 				MessageBox.Show("Student not found","Ooops");
