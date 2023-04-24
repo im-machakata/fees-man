@@ -16,7 +16,12 @@ namespace FeesManagement.Models
             Students = new List<Student>();
             StudentIDs = new Dictionary<int,string>();
         }
-        bool studentExists(Student student){
+        public bool studentExists(Student student){
+        	foreach (var element in Students) {
+        		if(element == student) {
+        			return true;
+        		}
+        	}
         	return false;
         }
         public bool enrollStudent(string name,string surname,int classNumber){
@@ -29,9 +34,6 @@ namespace FeesManagement.Models
         		StudentIDs.Add(classNumber,_class.getClass(classNumber));
         	}
         	return true;
-        }
-        public void searchStudent(Student student){
-        	// search
         }
         
     }
