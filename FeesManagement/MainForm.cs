@@ -16,18 +16,17 @@ namespace FeesManagement
 		{
 			InitializeComponent();
 		}
-		void ChangeInputColor(RichTextBox Input,string label){
-			bool isLabel = Input.Text.Trim() == label;
-			if(Input.Text.Trim() == "" || isLabel){
+		void ChangeInputColor(RichTextBox Input,string Label){
+			if(Utils.isEmpty(Input) || Utils.isLabel(Input,Label)){
 				Input.ForeColor = Color.FromKnownColor(KnownColor.ScrollBar);
 			} else {
 				Input.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
 			}
 		}
 		
-		void SetupLabel(RichTextBox Input,string label){
-			if(Input.Text.Trim() == "" || Input.Text == label){
-				Input.Text = label;
+		void SetupLabel(RichTextBox Input,string Label){
+			if(Utils.isEmpty(Input) || Utils.isLabel(Input,Label)){
+				Input.Text = Label;
 			}
 		}
 		
