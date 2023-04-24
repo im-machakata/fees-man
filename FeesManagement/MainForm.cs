@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using FeesManagement.Models;
 
 namespace FeesManagement
 {
@@ -39,7 +40,7 @@ namespace FeesManagement
 		// Verify if the username & password are correct
 		void LoginBtnClick(object sender, System.EventArgs e)
 		{
-			if(Username.Text == USERNAME && Password.Text == PASSWORD){
+			if(Username.Text == Config.Username && Password.Text == Config.Password){
 				ReportsForm reportsForm = new ReportsForm();
         		reportsForm.Show();
         		this.Hide();
