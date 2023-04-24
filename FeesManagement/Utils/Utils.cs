@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace FeesManagement
+namespace FeesManagement.Utils
 {
 	public class Utils
 	{
