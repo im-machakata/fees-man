@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+
 using FeesManagement.Models;
-using FeesManagement.Components;
-using FeesManagement.Utils;
 
 namespace FeesManagement.Views
 {

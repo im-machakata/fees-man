@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using FeesManagement.Utils;
+
 using FeesManagement.Models;
 
 namespace FeesManagement.Views
@@ -13,27 +12,22 @@ namespace FeesManagement.Views
 	/// </summary>
 	public partial class Reports : Form
 	{
-		public List<School> Schools { get; set; }
+		public Dictionary<string,School> Schools { get; set; }
 
         public Reports()
         {
             InitializeComponent();
-            Schools = new List<School>();
-            seedData();
+            Schools = new Dictionary<string,School>();
+            SeedData();
         }
 
-        public void AddSchool(School school)
+        // find school by name & or create one
+        public School FindSchoolByName(string name, bool add = false)
         {
-            Schools.Add(school);
-        }
-
-        // find schoo by name & or create one
-        public School FindSchoolByName(string name,bool add = false)
-        {
-            var exists = Schools.FirstOrDefault(x => x.Name.Equals(name));
+        	var exists = Schools.ContainsKey(name) ? Schools[name] : null;
             if(exists == null && add) {
-            	var school = new School(name);
-                AddSchool(school);
+            	var school = new School();
+            	Schools[name] = school;
                 return school;
             }
             return exists;
@@ -43,7 +37,7 @@ namespace FeesManagement.Views
         {
             foreach (var school in Schools)
             {
-                var student = school.Students.FirstOrDefault(x => x.ClassName == id);
+                var student = school.Students.FirstOrDefault(x => x.ID == id);
                 if (student != null)
                 {
                     return student;
@@ -54,8 +48,8 @@ namespace FeesManagement.Views
 
         public void AddStudentToClass(Student student, string className)
         {
-            var school = FindSchoolByName(className,true);
-            school.Students.Add(student);
+        	var school = FindSchoolByName(className,true);
+            school.EnrollStudent(student.Name, student.Surname, student.ClassName);
         }
 
         public void UpdateFeesBalance(Student student, decimal balance)
@@ -64,9 +58,8 @@ namespace FeesManagement.Views
         }
         
         // create dummy data
-        private void seedData(){
-        	var school = new School("Shakaesh High");
-            AddSchool(school);
+        void SeedData(){
+        	Schools["Shakashe High"];
         }
 		
 		void StudentBalanceBtnClick(object sender, EventArgs e)
