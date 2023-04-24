@@ -43,31 +43,13 @@ namespace FeesManagement.Views
         {
             foreach (var school in Schools)
             {
-                var student = school.Students.FirstOrDefault(x => x.ClassId == id);
+                var student = school.Students.FirstOrDefault(x => x.ClassName == id);
                 if (student != null)
                 {
                     return student;
                 }
             }
             return null;
-        }
-        
-        public string CreateStudentID(string className, School school_choice)
-        {
-        	// find number of stuents in class at school
-        	int occurences = 1;
-            foreach (var school in Schools)
-            {
-            	// only fetch data from the mentioned school
-            	if(school_choice.Name != school.Name) continue;
-            	
-            	// count number of students with classID
-                var student = school.Students.Where(x => x.Name == className);
-                occurences+=student.Count();
-            }
-            string name = occurences<10?"00":"0";
-            name = occurences>90?"":"0";
-            return String.Concat(className,name,occurences.ToString());
         }
 
         public void AddStudentToClass(Student student, string className)

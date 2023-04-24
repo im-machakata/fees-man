@@ -34,7 +34,7 @@ namespace FeesManagement.Models
         	
         	if(!studentExists(student)){
         	    // generate user id
-        	    student.ID = generateUID();
+        	    student.ID = generateUID(classNumber);
 
                 // add to temporary memory db
         		Students.Add(student);
