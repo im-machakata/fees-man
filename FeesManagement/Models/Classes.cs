@@ -11,6 +11,7 @@ namespace FeesManagement.Models
 
         public Classes()
         {
+        	ClassList = new Dictionary<int,string>();
         	// do something
         }
         /**
@@ -23,9 +24,9 @@ namespace FeesManagement.Models
         public void getClassName(int Grade){
         	return ClassList.ContainsKey(Grade) ? ClassList.Where(Grade) : null;
         }
-        public void getClass(int Grade){
-        	return ClassList.ContainsKey(Grade) ? ClassList.Where(Grade) : null;
-        }
         **/
+        public string getClass(int Grade){
+       		return ClassList[Grade];
+        }
     }
 }

@@ -8,17 +8,29 @@ namespace FeesManagement.Models
     {
         public string Name { get; set; }
         public List<Student> Students { get; set; }
-        private List<string> StudentID { get; set; }
+        private Dictionary<int,string> StudentIDs { get; set; }
 
-        public School()
+        public School(string name)
         {
+        	Name = name;
             Students = new List<Student>();
-            StudentID = new List<string>();
+            StudentIDs = new Dictionary<int,string>();
         }
-        public void enrollStudent(){
-        	// enroll
+        bool studentExists(Student student){
+        	return false;
         }
-        public void searchStudent(){
+        public bool enrollStudent(string name,string surname,int classNumber){
+        	Student student = new Student();
+        	Classes _class = new Classes();
+        	
+        	// add to temporary memory db
+        	if(!studentExists(student)){
+        		Students.Add(student);
+        		StudentIDs.Add(classNumber,_class.getClass(classNumber));
+        	}
+        	return true;
+        }
+        public void searchStudent(Student student){
         	// search
         }
         

@@ -32,7 +32,7 @@ namespace FeesManagement.Views
         {
             var exists = Schools.FirstOrDefault(x => x.Name.Equals(name));
             if(exists == null && add) {
-                var school = new School { Name = name };
+            	var school = new School(name);
                 AddSchool(school);
                 return school;
             }
@@ -83,7 +83,7 @@ namespace FeesManagement.Views
         
         // create dummy data
         private void seedData(){
-            var school = new School { Name = "Shakaesh High" };
+        	var school = new School("Shakaesh High");
             AddSchool(school);
         }
 		
