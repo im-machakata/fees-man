@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace FeesManagement.Utils
 {
-	public class Utils
+	public class Validation
 	{
 		public static bool isLabel(RichTextBox input,string label){
 			return input.Text.Trim() == label.Trim();

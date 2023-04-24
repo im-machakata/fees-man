@@ -1,16 +1,9 @@
-﻿/*
- * Created by SharpDevelop.
- * User: Caasi
- * Date: 4/24/2023
- * Time: 3:09 PM
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using FeesManagement.Models;
 using FeesManagement.Components;
+using FeesManagement.Utils;
 
 namespace FeesManagement.Views
 {
@@ -25,7 +18,7 @@ namespace FeesManagement.Views
 		}
 		
 		void ChangeInputColor(RichTextBox Input,string Label){
-			if(Utils.isEmpty(Input) || Utils.isLabel(Input,Label)){
+			if(Validation.isEmpty(Input) || Validation.isLabel(Input,Label)){
 				Input.ForeColor = Color.FromKnownColor(KnownColor.ScrollBar);
 			} else {
 				Input.ForeColor = Color.FromKnownColor(KnownColor.ControlText);
@@ -33,7 +26,7 @@ namespace FeesManagement.Views
 		}
 		
 		void SetupLabel(RichTextBox Input,string Label){
-			if(Utils.isEmpty(Input) || Utils.isLabel(Input,Label)){
+			if(Validation.isEmpty(Input) || Validation.isLabel(Input,Label)){
 				Input.Text = Label;
 			}
 		}
@@ -88,7 +81,7 @@ namespace FeesManagement.Views
 		void UsernameEnter(object sender, EventArgs e)
 		{
 			// clear username in equals default
-			if(Utils.isLabel(Username,"Username")){
+			if(Validation.isLabel(Username,"Username")){
 				Username.Clear();
 			}
 			ChangeInputColor(Username,"Username");
@@ -97,7 +90,7 @@ namespace FeesManagement.Views
 		void PasswordEnter(object sender, EventArgs e)
 		{
 			// clear password input if = label
-			if(Utils.isLabel(Password,"Password")){
+			if(Validation.isLabel(Password,"Password")){
 				Password.Clear();
 			}
 			ChangeInputColor(Password,"Password");

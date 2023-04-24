@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using FeesManagement.Utils;
 using FeesManagement.Models;
 
 namespace FeesManagement.Views
@@ -89,7 +90,7 @@ namespace FeesManagement.Views
 		void StudentBalanceBtnClick(object sender, EventArgs e)
 		{
 			// filter student balance	
-			if(Utils.isEmpty(studentClass)){
+			if(Validation.isEmpty(studentClass)){
 				MessageBox.Show("Enter a student name","Alert");
 			} else if (studentClass.Text.Trim() == "//"){
 				MessageBox.Show("Student not found","Ooops");

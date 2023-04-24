@@ -59,7 +59,6 @@ namespace FeesManagement.Components
 			this.CInput.Name = "CInput";
 			this.CInput.Size = new System.Drawing.Size(448, 24);
 			this.CInput.TabIndex = 1;
-			this.CInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CInputKeyDown);
 			// 
 			// IPanel
 			// 

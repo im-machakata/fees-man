@@ -30,10 +30,5 @@ namespace FeesManagement.Components
 			//
 			ILabel.Text = Label;
 		}
-		
-		void CInputKeyDown(object sender, KeyEventArgs e)
-		{
-			value = CInput.Text.Trim();
-		}
 	}
 }
