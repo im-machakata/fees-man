@@ -40,10 +40,7 @@ namespace FeesManagement.Views
         {
             foreach (var school in Schools)
             {
-                if (student != null)
-                {
-                    return student;
-                }
+            	//
             }
             return null;
         }
@@ -52,11 +49,6 @@ namespace FeesManagement.Views
         {
         	var school = FindSchoolByName(className,true);
             school.EnrollStudent(student.Name, student.Surname, student.ClassName);
-        }
-
-        public void UpdateFeesBalance(Student student, decimal balance)
-        {
-            student.FeesBalance = balance;
         }
         
         // create dummy data
