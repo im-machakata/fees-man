@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
+using FeesManagement.Utils;
 using FeesManagement.Models;
 
 namespace FeesManagement.Views
@@ -33,11 +34,12 @@ namespace FeesManagement.Views
             return exists;
         }
 
+        // we can search a student by their id number
+        // but it'd be better if we know their school too & class
         public Student FindStudentById(int id)
         {
             foreach (var school in Schools)
             {
-                var student = school.Students.FirstOrDefault(x => x.ID == id);
                 if (student != null)
                 {
                     return student;
@@ -59,7 +61,8 @@ namespace FeesManagement.Views
         
         // create dummy data
         void SeedData(){
-        	Schools["Shakashe High"];
+        	Schools["Shakashe High"] = new School();
+        	Schools["Madyangove High"] = new School();
         }
 		
 		void StudentBalanceBtnClick(object sender, EventArgs e)
