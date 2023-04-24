@@ -1,8 +1,16 @@
-﻿using System.Windows.Forms;
-namespace FeesManagement
+﻿/*
+ * Created by SharpDevelop.
+ * User: Caasi
+ * Date: 4/24/2023
+ * Time: 3:09 PM
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+namespace FeesManagement.Views
 {
-	partial class MainForm
+	partial class Login
 	{
+		
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.
 		/// </summary>
@@ -29,7 +37,7 @@ namespace FeesManagement
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.ExitBtn = new System.Windows.Forms.Label();
 			this.loginBtn = new System.Windows.Forms.Button();

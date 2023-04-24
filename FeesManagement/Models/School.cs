@@ -15,6 +15,12 @@ namespace FeesManagement.Models
             Students = new List<Student>();
             StudentID = new List<string>();
         }
+        public void enrollStudent(){
+        	// enroll
+        }
+        public void searchStudent(){
+        	// search
+        }
         
     }
 }

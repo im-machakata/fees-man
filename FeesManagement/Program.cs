@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using FeesManagement.Views;
 
 namespace FeesManagement
 {
@@ -16,7 +17,7 @@ namespace FeesManagement
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MainForm());
+			Application.Run(new Login());
 		}
 		
 	}

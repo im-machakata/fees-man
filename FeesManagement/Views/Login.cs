@@ -1,14 +1,24 @@
-﻿using System;
+﻿/*
+ * Created by SharpDevelop.
+ * User: Caasi
+ * Date: 4/24/2023
+ * Time: 3:09 PM
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-
 using FeesManagement.Models;
 
-namespace FeesManagement
+namespace FeesManagement.Views
 {
-	public partial class MainForm : Form
-	{		
-		public MainForm()
+	/// <summary>
+	/// Description of Login.
+	/// </summary>
+	public partial class Login : Form
+	{
+		public Login()
 		{
 			InitializeComponent();
 		}
