@@ -1,14 +1,14 @@
 ﻿/*
  * Created by SharpDevelop.
  * User: Caasi
- * Date: 4/20/2023
- * Time: 9:07 PM
+ * Date: 4/24/2023
+ * Time: 3:18 PM
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
-namespace FeesManagement
+namespace FeesManagement.Views
 {
-	partial class ReportsForm
+	partial class Reports
 	{
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.

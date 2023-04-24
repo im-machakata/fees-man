@@ -5,13 +5,16 @@ using System.Linq;
 using System.Windows.Forms;
 using FeesManagement.Models;
 
-namespace FeesManagement
+namespace FeesManagement.Views
 {
-    public partial class ReportsForm : Form
-    {
-        public List<School> Schools { get; set; }
+	/// <summary>
+	/// Description of Reports.
+	/// </summary>
+	public partial class Reports : Form
+	{
+		public List<School> Schools { get; set; }
 
-        public ReportsForm()
+        public Reports()
         {
             InitializeComponent();
             Schools = new List<School>();
@@ -120,5 +123,5 @@ namespace FeesManagement
 				// calculate balance
 			}
 		}
-    }
+	}
 }

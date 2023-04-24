@@ -46,7 +46,7 @@ namespace FeesManagement.Views
 		void LoginBtnClick(object sender, System.EventArgs e)
 		{
 			if(Username.Text == Config.Username && Password.Text == Config.Password){
-				ReportsForm reportsForm = new ReportsForm();
+				Reports reportsForm = new Reports();
         		reportsForm.Show();
         		this.Hide();
 			} else {
