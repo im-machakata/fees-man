@@ -11,23 +11,18 @@ namespace FeesManagement.Models
 		public int ID {
 			set { id = value; }
 			get { 
-				return Int16.Parse(
-					String.Concat(
-						ClassName, 
-						prepareUserID(id.ToString())
-					)
-				);
+				return prepareUserID(id.ToString());
 			}
 		}
 	    public string Name { get; set; }
 	    public int ClassName { get; set; }
 	    public decimal FeesBalance { get; set; }
 	    
-	    string prepareUserID(string id){
-	    	if( Int16.Parse(id) > 999) {
-	    		return id;
+	    string PrepareUserID(string id){
+	    	if( id.Length > 999) {
+	    		return String.Concat(ClassName, id);
 	    	}
-	    	return prepareUserID( String.Concat("0", id) );
+	    	return PrepareUserID( String.Concat("0", id) );
 	    }
 	}
 }
