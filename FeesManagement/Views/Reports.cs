@@ -103,7 +103,7 @@ namespace FeesManagement.Views
 		void ClassFilterBtnClick(object sender, EventArgs e)
 		{
 			// filter class balance			
-			if(className.Text.Trim()== ""){
+			if(Validation.isEmpty(className)){
 				MessageBox.Show("Enter a class name","Alert");
 			} else {
 				// calculate balance
@@ -113,7 +113,7 @@ namespace FeesManagement.Views
 		void SchoolFilterButtonClick(object sender, EventArgs e)
 		{
 			// filter school balance		
-			if(schoolName.Text.Trim() == ""){
+			if(Validation.isEmpty(schoolName)){
 				MessageBox.Show("Enter a class name","Alert");
 			} else {
 				// calculate balance
