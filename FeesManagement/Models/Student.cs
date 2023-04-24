@@ -11,10 +11,11 @@ namespace FeesManagement.Models
 		public int ID {
 			set { id = value; }
 			get { 
-				return prepareUserID(id.ToString());
+				return Int16.Parse(PrepareUserID(id.ToString()));
 			}
 		}
 	    public string Name { get; set; }
+	    public string Surname { get; set; }
 	    public int ClassName { get; set; }
 	    public decimal FeesBalance { get; set; }
 	    
