@@ -30,7 +30,7 @@ namespace FeesManagement.Models
         	Student student = new Student();
         	Classes _class = new Classes();
         	
-        	if(!studentExists(student)){
+        	if(!StudentExists(student)){
         	    // generate user id
         	    student.ID = GenerateUID(classNumber);
 
