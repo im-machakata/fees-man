@@ -86,11 +86,6 @@ namespace FeesManagement.Views
             AddSchool(school);
         }
 		
-		void Label2Click(object sender, EventArgs e)
-		{
-			
-		}
-		
 		void StudentBalanceBtnClick(object sender, EventArgs e)
 		{
 			// filter student balance	

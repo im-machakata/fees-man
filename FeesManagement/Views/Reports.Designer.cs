@@ -46,17 +46,17 @@ namespace FeesManagement.Views
 			this.studentBalanceBtn = new System.Windows.Forms.Button();
 			this.studentDescription = new System.Windows.Forms.Label();
 			this.ClassPage = new System.Windows.Forms.TabPage();
+			this.panel3 = new System.Windows.Forms.Panel();
 			this.classBalance = new System.Windows.Forms.Label();
 			this.className = new System.Windows.Forms.TextBox();
 			this.classFilterBtn = new System.Windows.Forms.Button();
 			this.classDescription = new System.Windows.Forms.Label();
 			this.SchoolPage = new System.Windows.Forms.TabPage();
+			this.panel4 = new System.Windows.Forms.Panel();
 			this.schoolBalance = new System.Windows.Forms.Label();
 			this.schoolName = new System.Windows.Forms.TextBox();
 			this.schoolFilterButton = new System.Windows.Forms.Button();
 			this.schoolDescription = new System.Windows.Forms.Label();
-			this.panel3 = new System.Windows.Forms.Panel();
-			this.panel4 = new System.Windows.Forms.Panel();
 			this.panel1.SuspendLayout();
 			this.StudentReport.SuspendLayout();
 			this.StudentPage.SuspendLayout();
@@ -126,7 +126,6 @@ namespace FeesManagement.Views
 			this.studentBalance.Size = new System.Drawing.Size(210, 32);
 			this.studentBalance.TabIndex = 3;
 			this.studentBalance.Text = "$0.00";
-			this.studentBalance.Click += new System.EventHandler(this.Label2Click);
 			// 
 			// studentName
 			// 
@@ -171,6 +170,14 @@ namespace FeesManagement.Views
 			this.ClassPage.TabIndex = 1;
 			this.ClassPage.Text = "Class";
 			this.ClassPage.UseVisualStyleBackColor = true;
+			// 
+			// panel3
+			// 
+			this.panel3.BackColor = System.Drawing.Color.DimGray;
+			this.panel3.Location = new System.Drawing.Point(260, 6);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(5, 255);
+			this.panel3.TabIndex = 8;
 			// 
 			// classBalance
 			// 
@@ -224,6 +231,14 @@ namespace FeesManagement.Views
 			this.SchoolPage.Text = "School";
 			this.SchoolPage.UseVisualStyleBackColor = true;
 			// 
+			// panel4
+			// 
+			this.panel4.BackColor = System.Drawing.Color.DimGray;
+			this.panel4.Location = new System.Drawing.Point(250, 6);
+			this.panel4.Name = "panel4";
+			this.panel4.Size = new System.Drawing.Size(5, 255);
+			this.panel4.TabIndex = 8;
+			// 
 			// schoolBalance
 			// 
 			this.schoolBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -261,30 +276,14 @@ namespace FeesManagement.Views
 			this.schoolDescription.TabIndex = 4;
 			this.schoolDescription.Text = "Showing balance for: ";
 			// 
-			// panel3
-			// 
-			this.panel3.BackColor = System.Drawing.Color.DimGray;
-			this.panel3.Location = new System.Drawing.Point(260, 6);
-			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(5, 255);
-			this.panel3.TabIndex = 8;
-			// 
-			// panel4
-			// 
-			this.panel4.BackColor = System.Drawing.Color.DimGray;
-			this.panel4.Location = new System.Drawing.Point(250, 6);
-			this.panel4.Name = "panel4";
-			this.panel4.Size = new System.Drawing.Size(5, 255);
-			this.panel4.TabIndex = 8;
-			// 
-			// ReportsForm
+			// Reports
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(820, 293);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			this.Name = "ReportsForm";
+			this.Name = "Reports";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Reports";
 			this.panel1.ResumeLayout(false);
