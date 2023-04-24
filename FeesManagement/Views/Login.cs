@@ -30,7 +30,7 @@ namespace FeesManagement.Views
 			}
 		}
 		
-		void resetInputColors(){
+		void ResetInputColors(){
 			ChangeInputColor(Password,"Password");
 			ChangeInputColor(Username,"Username");
 		}
@@ -51,7 +51,7 @@ namespace FeesManagement.Views
 				Password.Text = "Password";
 				
 				// Change colors
-				resetInputColors();
+				ResetInputColors();
 			}
 		}
 		
