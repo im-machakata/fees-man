@@ -116,6 +116,12 @@ namespace FeesManagement.Views
 		void UsernameKeyUp(object sender, KeyEventArgs e)
 		{
 			ChangeInputColor(Username,"Username");
+			// if user presses enter
+			// trigger login
+			if (e.KeyCode == Keys.Enter)
+		    {
+				Password.Focus();
+		    }
 		}
 	}
 }
