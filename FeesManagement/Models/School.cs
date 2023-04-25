@@ -7,6 +7,7 @@ namespace FeesManagement.Models
     public class School
     {
         public List<Student> Students { get; set; }
+        public Classes Classes { get; set; }
 
         // we will store student id in here
         // we use a dictionary to keep track of 
@@ -15,6 +16,7 @@ namespace FeesManagement.Models
 
         public School()
         {
+            Classes = new Classes();
             Students = new List<Student>();
             StudentIDs = new Dictionary<int,string>();
         }
