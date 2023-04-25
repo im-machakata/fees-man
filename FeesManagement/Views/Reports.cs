@@ -8,11 +8,11 @@ using FeesManagement.Models;
 
 namespace FeesManagement.Views
 {
-	/// <summary>
-	/// Description of Reports.
-	/// </summary>
 	public partial class Reports : Form
 	{
+		// We use this to store a school by its class
+		// in this format Form 1 > Students
+		// eg. Schools["Form 1"] = List of students
 		public Dictionary<string,School> Schools { get; set; }
 
         public Reports()
