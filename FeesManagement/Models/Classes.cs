@@ -12,7 +12,6 @@ namespace FeesManagement.Models
         public Classes()
         {
         	ClassList = new Dictionary<int,string>();
-        	// do something
         }
         public Classes addClass(int Grade,string Name){
         	ClassList[Grade] = Name;
