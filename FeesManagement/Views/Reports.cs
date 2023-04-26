@@ -40,7 +40,12 @@ namespace FeesManagement.Views
         {
             foreach (var school in Schools)
             {
-            	//
+            	var classList = Schools[school.Key].Students;
+            	foreach (var student in classList) {
+            		if(student.ID == id){
+            			return student;
+            		}
+            	}
             }
             return null;
         }

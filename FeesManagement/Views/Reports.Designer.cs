@@ -39,6 +39,7 @@ namespace FeesManagement.Views
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.StudentReport = new System.Windows.Forms.TabControl();
 			this.StudentPage = new System.Windows.Forms.TabPage();
+			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.studentClass = new System.Windows.Forms.TextBox();
 			this.studentBalance = new System.Windows.Forms.Label();
@@ -70,7 +71,7 @@ namespace FeesManagement.Views
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(820, 293);
+			this.panel1.Size = new System.Drawing.Size(812, 300);
 			this.panel1.TabIndex = 0;
 			// 
 			// StudentReport
@@ -82,11 +83,12 @@ namespace FeesManagement.Views
 			this.StudentReport.Location = new System.Drawing.Point(0, 0);
 			this.StudentReport.Name = "StudentReport";
 			this.StudentReport.SelectedIndex = 0;
-			this.StudentReport.Size = new System.Drawing.Size(820, 293);
+			this.StudentReport.Size = new System.Drawing.Size(812, 300);
 			this.StudentReport.TabIndex = 0;
 			// 
 			// StudentPage
 			// 
+			this.StudentPage.Controls.Add(this.tableLayoutPanel1);
 			this.StudentPage.Controls.Add(this.panel2);
 			this.StudentPage.Controls.Add(this.studentClass);
 			this.StudentPage.Controls.Add(this.studentBalance);
@@ -96,10 +98,25 @@ namespace FeesManagement.Views
 			this.StudentPage.Location = new System.Drawing.Point(4, 22);
 			this.StudentPage.Name = "StudentPage";
 			this.StudentPage.Padding = new System.Windows.Forms.Padding(3);
-			this.StudentPage.Size = new System.Drawing.Size(812, 267);
+			this.StudentPage.Size = new System.Drawing.Size(804, 274);
 			this.StudentPage.TabIndex = 0;
 			this.StudentPage.Text = "Student";
 			this.StudentPage.UseVisualStyleBackColor = true;
+			// 
+			// tableLayoutPanel1
+			// 
+			this.tableLayoutPanel1.ColumnCount = 4;
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(290, 23);
+			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+			this.tableLayoutPanel1.RowCount = 2;
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(486, 220);
+			this.tableLayoutPanel1.TabIndex = 6;
 			// 
 			// panel2
 			// 
@@ -166,7 +183,7 @@ namespace FeesManagement.Views
 			this.ClassPage.Location = new System.Drawing.Point(4, 22);
 			this.ClassPage.Name = "ClassPage";
 			this.ClassPage.Padding = new System.Windows.Forms.Padding(3);
-			this.ClassPage.Size = new System.Drawing.Size(812, 267);
+			this.ClassPage.Size = new System.Drawing.Size(804, 274);
 			this.ClassPage.TabIndex = 1;
 			this.ClassPage.Text = "Class";
 			this.ClassPage.UseVisualStyleBackColor = true;
@@ -226,7 +243,7 @@ namespace FeesManagement.Views
 			this.SchoolPage.Location = new System.Drawing.Point(4, 22);
 			this.SchoolPage.Name = "SchoolPage";
 			this.SchoolPage.Padding = new System.Windows.Forms.Padding(3);
-			this.SchoolPage.Size = new System.Drawing.Size(812, 267);
+			this.SchoolPage.Size = new System.Drawing.Size(804, 274);
 			this.SchoolPage.TabIndex = 2;
 			this.SchoolPage.Text = "School";
 			this.SchoolPage.UseVisualStyleBackColor = true;
@@ -280,7 +297,7 @@ namespace FeesManagement.Views
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(820, 293);
+			this.ClientSize = new System.Drawing.Size(812, 300);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "Reports";
@@ -296,6 +313,7 @@ namespace FeesManagement.Views
 			this.SchoolPage.PerformLayout();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Panel panel2;
