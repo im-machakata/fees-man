@@ -38,13 +38,26 @@ namespace FeesManagement.Views
         // but it'd be better if we know their school too & class
         public Student FindStudentById(int id)
         {
+        	// loop through all schools
             foreach (var school in Schools)
             {
-            	var classList = Schools[school.Key].Students;
-            	foreach (var student in classList) {
-            		if(student.ID == id){
-            			return student;
-            		}
+            	var schoolName = school.Key;
+            	var schoolClassesList = Schools[schoolName].GetClasses();
+            	
+            	// loop through all classes
+            	foreach (var _class in schoolClassesList) {
+            		
+            		// class name
+            		var classes = Schools[schoolName].Students[_class];
+            		
+            		// loop through all students in class
+            		foreach (var student in classes) {
+            			
+            			// find student with that id
+	            		if(student.ID == id){
+	            			return student;
+	            		}
+	            	}
             	}
             }
             return null;
@@ -54,6 +67,14 @@ namespace FeesManagement.Views
         {
         	var school = FindSchoolByName(className,true);
             school.EnrollStudent(student.Name, student.Surname, student.ClassName);
+        }
+        
+        void LoadStudents(){
+        	// load default students
+        }
+        
+        void LoadClassess(){
+        	//
         }
         
         // create dummy data

@@ -6,7 +6,7 @@ namespace FeesManagement.Models
 {
     public class School
     {
-    	public Dictionary<int,List<Student>> Students { get; set; }
+    	public Dictionary<string,List<Student>> Students { get; set; }
         public Classes Classes { get; set; }
 
         // we will store student id in here
@@ -17,7 +17,7 @@ namespace FeesManagement.Models
         public School()
         {
             Classes = new Classes();
-            Students = new Dictionary<int,List<Student>>();
+            Students = new Dictionary<string,List<Student>>();
             StudentIDs = new Dictionary<int,string>();
         }
         public bool StudentExists(Student student){
@@ -37,13 +37,13 @@ namespace FeesManagement.Models
         	    student.ID = GenerateUID(classNumber);
 
                 // add to temporary memory db
-                Students[classNumber].Add(student);
+                Students[classNumber.ToString()].Add(student);
         		StudentIDs.Add(classNumber,_class.getClass(classNumber));
         	}
         	return true;
         }
         
-        public List GetClasses(){
+        public List<string> GetClasses(){
         	return Students.Keys.ToList();
         }
         
