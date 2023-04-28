@@ -63,6 +63,7 @@ namespace FeesManagement.Views
 			this.schoolName = new System.Windows.Forms.TextBox();
 			this.schoolFilterButton = new System.Windows.Forms.Button();
 			this.schoolDescription = new System.Windows.Forms.Label();
+			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
 			this.panel1.SuspendLayout();
 			this.StudentReport.SuspendLayout();
 			this.StudentPage.SuspendLayout();
@@ -93,6 +94,7 @@ namespace FeesManagement.Views
 			// 
 			// StudentPage
 			// 
+			this.StudentPage.Controls.Add(this.flowLayoutPanel1);
 			this.StudentPage.Controls.Add(this.button6);
 			this.StudentPage.Controls.Add(this.button5);
 			this.StudentPage.Controls.Add(this.button4);
@@ -348,6 +350,13 @@ namespace FeesManagement.Views
 			this.schoolDescription.TabIndex = 4;
 			this.schoolDescription.Text = "Showing balance for: ";
 			// 
+			// flowLayoutPanel1
+			// 
+			this.flowLayoutPanel1.Location = new System.Drawing.Point(290, 68);
+			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(489, 175);
+			this.flowLayoutPanel1.TabIndex = 8;
+			// 
 			// Reports
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,6 +377,7 @@ namespace FeesManagement.Views
 			this.SchoolPage.PerformLayout();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button3;

@@ -20,11 +20,20 @@ namespace FeesManagement.Models
             Students = new Dictionary<string,List<Student>>();
             StudentIDs = new Dictionary<int,string>();
         }
-        public bool StudentExists(Student student){
-        	foreach (var element in Students) {
-        		if(element.Value.Contains(student)) {
-        			return true;
-        		}
+
+        public bool StudentExists(string name, string surname){
+        	foreach (var className in Students.Keys) {
+        		
+        		// get class list
+        		var classList = Students[className]; 
+        		
+                // find student using name & surname
+        		foreach(var student in classList){
+
+                    if(student.Name == name && student.Surname == surname) {
+        			    return true;
+        		    }
+                }
         	}
         	return false;
         }
@@ -32,7 +41,7 @@ namespace FeesManagement.Models
         	Student student = new Student();
         	Classes _class = new Classes();
         	
-        	if(!StudentExists(student)){
+        	if(!StudentExists(name,surname)){
         	    // generate user id
         	    student.ID = GenerateUID(classNumber);
 
