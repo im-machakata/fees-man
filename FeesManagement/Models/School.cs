@@ -38,7 +38,7 @@ namespace FeesManagement.Models
         	return false;
         }
         public bool EnrollStudent(string name,string surname,int classNumber){
-        	Student student = new Student();
+        	Student student = new Student {name: name, surname: surname};
         	Classes _class = new Classes();
         	
         	if(!StudentExists(name,surname)){

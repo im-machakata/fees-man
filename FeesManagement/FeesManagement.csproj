@@ -64,9 +64,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\CustomInput.cs" />
-    <Compile Include="Components\CustomInput.Designer.cs">
-      <DependentUpon>CustomInput.cs</DependentUpon>
+    <Compile Include="Components\StudentCard.cs" />
+    <Compile Include="Components\StudentCard.Designer.cs">
+      <DependentUpon>StudentCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Classes.cs" />
     <Compile Include="Models\Config.cs" />
@@ -85,8 +85,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Components\CustomInput.resx">
-      <DependentUpon>CustomInput.cs</DependentUpon>
+    <EmbeddedResource Include="Components\StudentCard.resx">
+      <DependentUpon>StudentCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
