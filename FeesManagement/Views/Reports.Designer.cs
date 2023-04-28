@@ -39,12 +39,6 @@ namespace FeesManagement.Views
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.StudentReport = new System.Windows.Forms.TabControl();
 			this.StudentPage = new System.Windows.Forms.TabPage();
-			this.button6 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.studentClass = new System.Windows.Forms.TextBox();
 			this.studentBalance = new System.Windows.Forms.Label();
@@ -63,7 +57,7 @@ namespace FeesManagement.Views
 			this.schoolName = new System.Windows.Forms.TextBox();
 			this.schoolFilterButton = new System.Windows.Forms.Button();
 			this.schoolDescription = new System.Windows.Forms.Label();
-			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+			this.studentsCardContainer = new System.Windows.Forms.FlowLayoutPanel();
 			this.panel1.SuspendLayout();
 			this.StudentReport.SuspendLayout();
 			this.StudentPage.SuspendLayout();
@@ -94,13 +88,7 @@ namespace FeesManagement.Views
 			// 
 			// StudentPage
 			// 
-			this.StudentPage.Controls.Add(this.flowLayoutPanel1);
-			this.StudentPage.Controls.Add(this.button6);
-			this.StudentPage.Controls.Add(this.button5);
-			this.StudentPage.Controls.Add(this.button4);
-			this.StudentPage.Controls.Add(this.button3);
-			this.StudentPage.Controls.Add(this.button2);
-			this.StudentPage.Controls.Add(this.button1);
+			this.StudentPage.Controls.Add(this.studentsCardContainer);
 			this.StudentPage.Controls.Add(this.panel2);
 			this.StudentPage.Controls.Add(this.studentClass);
 			this.StudentPage.Controls.Add(this.studentBalance);
@@ -114,66 +102,6 @@ namespace FeesManagement.Views
 			this.StudentPage.TabIndex = 0;
 			this.StudentPage.Text = "Student";
 			this.StudentPage.UseVisualStyleBackColor = true;
-			// 
-			// button6
-			// 
-			this.button6.Location = new System.Drawing.Point(695, 7);
-			this.button6.Name = "button6";
-			this.button6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.button6.Size = new System.Drawing.Size(75, 23);
-			this.button6.TabIndex = 7;
-			this.button6.Text = "Form 6";
-			this.button6.UseVisualStyleBackColor = true;
-			// 
-			// button5
-			// 
-			this.button5.Location = new System.Drawing.Point(614, 7);
-			this.button5.Name = "button5";
-			this.button5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.button5.Size = new System.Drawing.Size(75, 23);
-			this.button5.TabIndex = 7;
-			this.button5.Text = "Form 5";
-			this.button5.UseVisualStyleBackColor = true;
-			// 
-			// button4
-			// 
-			this.button4.Location = new System.Drawing.Point(533, 7);
-			this.button4.Name = "button4";
-			this.button4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.button4.Size = new System.Drawing.Size(75, 23);
-			this.button4.TabIndex = 7;
-			this.button4.Text = "Form 4";
-			this.button4.UseVisualStyleBackColor = true;
-			// 
-			// button3
-			// 
-			this.button3.Location = new System.Drawing.Point(452, 7);
-			this.button3.Name = "button3";
-			this.button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.button3.Size = new System.Drawing.Size(75, 23);
-			this.button3.TabIndex = 7;
-			this.button3.Text = "Form 3";
-			this.button3.UseVisualStyleBackColor = true;
-			// 
-			// button2
-			// 
-			this.button2.Location = new System.Drawing.Point(371, 7);
-			this.button2.Name = "button2";
-			this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.button2.Size = new System.Drawing.Size(75, 23);
-			this.button2.TabIndex = 7;
-			this.button2.Text = "Form 2";
-			this.button2.UseVisualStyleBackColor = true;
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(290, 7);
-			this.button1.Name = "button1";
-			this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 7;
-			this.button1.Text = "Form 1";
-			this.button1.UseVisualStyleBackColor = true;
 			// 
 			// panel2
 			// 
@@ -350,12 +278,12 @@ namespace FeesManagement.Views
 			this.schoolDescription.TabIndex = 4;
 			this.schoolDescription.Text = "Showing balance for: ";
 			// 
-			// flowLayoutPanel1
+			// studentsCardContainer
 			// 
-			this.flowLayoutPanel1.Location = new System.Drawing.Point(290, 68);
-			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-			this.flowLayoutPanel1.Size = new System.Drawing.Size(489, 175);
-			this.flowLayoutPanel1.TabIndex = 8;
+			this.studentsCardContainer.Location = new System.Drawing.Point(268, 6);
+			this.studentsCardContainer.Name = "studentsCardContainer";
+			this.studentsCardContainer.Size = new System.Drawing.Size(528, 255);
+			this.studentsCardContainer.TabIndex = 8;
 			// 
 			// Reports
 			// 
@@ -377,13 +305,7 @@ namespace FeesManagement.Views
 			this.SchoolPage.PerformLayout();
 			this.ResumeLayout(false);
 		}
-		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.Button button5;
-		private System.Windows.Forms.Button button6;
+		private System.Windows.Forms.FlowLayoutPanel studentsCardContainer;
 		private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Panel panel2;
