@@ -45,7 +45,6 @@ namespace FeesManagement.Views
 			this.button3 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
-			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.studentClass = new System.Windows.Forms.TextBox();
 			this.studentBalance = new System.Windows.Forms.Label();
@@ -100,7 +99,6 @@ namespace FeesManagement.Views
 			this.StudentPage.Controls.Add(this.button3);
 			this.StudentPage.Controls.Add(this.button2);
 			this.StudentPage.Controls.Add(this.button1);
-			this.StudentPage.Controls.Add(this.tableLayoutPanel1);
 			this.StudentPage.Controls.Add(this.panel2);
 			this.StudentPage.Controls.Add(this.studentClass);
 			this.StudentPage.Controls.Add(this.studentBalance);
@@ -174,21 +172,6 @@ namespace FeesManagement.Views
 			this.button1.TabIndex = 7;
 			this.button1.Text = "Form 1";
 			this.button1.UseVisualStyleBackColor = true;
-			// 
-			// tableLayoutPanel1
-			// 
-			this.tableLayoutPanel1.ColumnCount = 4;
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(290, 34);
-			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 2;
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(486, 220);
-			this.tableLayoutPanel1.TabIndex = 6;
 			// 
 			// panel2
 			// 
@@ -391,7 +374,6 @@ namespace FeesManagement.Views
 		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Button button5;
 		private System.Windows.Forms.Button button6;
-		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Panel panel2;

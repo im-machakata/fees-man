@@ -57,7 +57,7 @@ namespace FeesManagement.Components
 			this.CInput.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.CInput.Location = new System.Drawing.Point(16, 26);
 			this.CInput.Name = "CInput";
-			this.CInput.Size = new System.Drawing.Size(448, 24);
+			this.CInput.Size = new System.Drawing.Size(359, 24);
 			this.CInput.TabIndex = 1;
 			// 
 			// IPanel
@@ -77,7 +77,7 @@ namespace FeesManagement.Components
 			this.Controls.Add(this.CInput);
 			this.Controls.Add(this.ILabel);
 			this.Name = "CustomInput";
-			this.Size = new System.Drawing.Size(474, 58);
+			this.Size = new System.Drawing.Size(386, 58);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
