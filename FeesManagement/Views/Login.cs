@@ -23,8 +23,8 @@ namespace FeesManagement.Views
 			Password.SetWidth(350);
 			Username.SetWidth(350);
 			
-			UsernamePanel.Controls.Add(Password);
-			PasswordPanel.Controls.Add(Username);
+			UsernamePanel.Controls.Add(Username);
+			PasswordPanel.Controls.Add(Password);
 		}
 		
 		// Verify if the username & password are correct
@@ -37,10 +37,10 @@ namespace FeesManagement.Views
         		reports.Show();
         		this.Hide();
 			} else {
-				MessageBox.Show("Username or password is incorrect","Warning!",MessageBoxButtons.OK);
+				MessageBox.Show("Username or password is incorrect ","Warning!",MessageBoxButtons.OK);
 				// reset inputs to labels
-				Username.Text = "Username";
-				Password.Text = "Password";
+				Username.SetText("Username");
+				Password.SetText("Password");
 			}
 		}
 		

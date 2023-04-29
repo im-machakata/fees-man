@@ -65,6 +65,7 @@ namespace FeesManagement.Components
 			this.ILabel.Size = new System.Drawing.Size(225, 19);
 			this.ILabel.TabIndex = 1;
 			this.ILabel.Text = "Label";
+			this.ILabel.TextChanged += new System.EventHandler(this.ILabelTextChanged);
 			this.ILabel.Enter += new System.EventHandler(this.ILabelEnter);
 			this.ILabel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ILabelKeyPress);
 			this.ILabel.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ILabelKeyUp);

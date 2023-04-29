@@ -9,9 +9,10 @@ namespace FeesManagement.Components
 	public partial class InputBox : UserControl
 	{
 		string Label;
+		string Input;
 		
 		public string Value {
-			get { return ILabel.Text; }
+			get { return Input; }
 		}
 		
 		public InputBox(string InputLabel)
@@ -22,7 +23,7 @@ namespace FeesManagement.Components
 		}
 		public void SetWidth(int Value){
 			Width = Value;
-			ILabel.Width = Value - 12;
+			ILabel.Width = Value - 25;
 			ILabel.Refresh();
 		}
 		public void SetText(string Label){
@@ -63,6 +64,11 @@ namespace FeesManagement.Components
 		void ILabelKeyPress(object sender, KeyPressEventArgs e)
 		{
 			ChangeLabelColor();
+		}
+		
+		void ILabelTextChanged(object sender, EventArgs e)
+		{
+			Input = ILabel.Text.Trim();
 		}
 	}
 }
