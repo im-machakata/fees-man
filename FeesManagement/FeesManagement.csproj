@@ -64,6 +64,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\InputBox.cs" />
+    <Compile Include="Components\InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\StudentCard.cs" />
     <Compile Include="Components\StudentCard.Designer.cs">
       <DependentUpon>StudentCard.cs</DependentUpon>
@@ -85,6 +89,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Components\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\StudentCard.resx">
       <DependentUpon>StudentCard.cs</DependentUpon>
     </EmbeddedResource>
