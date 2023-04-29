@@ -6,13 +6,14 @@ namespace FeesManagement.Models
 {
     public class School
     {
-    	public Dictionary<string,List<Student>> Students { get; set; }
-        public Classes Classes { get; set; }
-
+    	public Classes Classes { get; set; }
+    	
         // we will store student id in here
         // we use a dictionary to keep track of 
         // the number of id each class has
         private Dictionary<int,string> StudentIDs { get; set; }
+        
+        public Dictionary<string, List<Student> > Students { get; set; }
 
         public School()
         {
@@ -37,6 +38,24 @@ namespace FeesManagement.Models
         	}
         	return false;
         }
+
+        public bool StudentExists(int ID){
+        	foreach (var className in Students.Keys) {
+        		
+        		// get class list
+        		var classList = Students[className]; 
+        		
+                // find student using name & surname
+        		foreach(var student in classList){
+
+                    if(student.ID == ID) {
+        			    return true;
+        		    }
+                }
+        	}
+        	return false;
+        }
+        
         public bool EnrollStudent(string name,string surname,int classNumber){
         	Student student = new Student();
         	student.Name = name;

@@ -50,7 +50,7 @@ namespace FeesManagement.Views
 			// 
 			// panel1
 			// 
-			this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+			this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
 			this.panel1.Controls.Add(this.ExitBtn);
 			this.panel1.Controls.Add(this.loginBtn);
 			this.panel1.Controls.Add(this.PasswordPanel);
@@ -64,7 +64,7 @@ namespace FeesManagement.Views
 			// 
 			// ExitBtn
 			// 
-			this.ExitBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+			this.ExitBtn.BackColor = System.Drawing.Color.DarkSlateGray;
 			this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.ExitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -108,7 +108,7 @@ namespace FeesManagement.Views
 			// 
 			// signInImage
 			// 
-			this.signInImage.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+			this.signInImage.BackColor = System.Drawing.Color.DarkSlateGray;
 			this.signInImage.Image = ((System.Drawing.Image)(resources.GetObject("signInImage.Image")));
 			this.signInImage.InitialImage = ((System.Drawing.Image)(resources.GetObject("signInImage.InitialImage")));
 			this.signInImage.Location = new System.Drawing.Point(206, 32);
