@@ -62,10 +62,11 @@ namespace FeesManagement.Components
 			this.ILabel.Multiline = false;
 			this.ILabel.Name = "ILabel";
 			this.ILabel.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-			this.ILabel.Size = new System.Drawing.Size(265, 19);
+			this.ILabel.Size = new System.Drawing.Size(225, 19);
 			this.ILabel.TabIndex = 1;
 			this.ILabel.Text = "Label";
 			this.ILabel.Enter += new System.EventHandler(this.ILabelEnter);
+			this.ILabel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ILabelKeyPress);
 			this.ILabel.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ILabelKeyUp);
 			this.ILabel.Leave += new System.EventHandler(this.ILabelLeave);
 			// 

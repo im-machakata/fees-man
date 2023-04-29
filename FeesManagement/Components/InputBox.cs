@@ -22,6 +22,8 @@ namespace FeesManagement.Components
 		}
 		public void SetWidth(int Value){
 			Width = Value;
+			ILabel.Width = Value - 12;
+			ILabel.Refresh();
 		}
 		public void SetText(string Label){
 			ILabel.Text = Label;
@@ -54,6 +56,11 @@ namespace FeesManagement.Components
 		}
 		
 		void ILabelKeyUp(object sender, KeyEventArgs e)
+		{
+			ChangeLabelColor();
+		}
+		
+		void ILabelKeyPress(object sender, KeyPressEventArgs e)
 		{
 			ChangeLabelColor();
 		}

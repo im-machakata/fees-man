@@ -67,7 +67,7 @@ namespace FeesManagement.Views
 			this.ExitBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
 			this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.ExitBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
+			this.ExitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
 			this.ExitBtn.Location = new System.Drawing.Point(213, 368);
 			this.ExitBtn.Name = "ExitBtn";
 			this.ExitBtn.Size = new System.Drawing.Size(83, 23);
