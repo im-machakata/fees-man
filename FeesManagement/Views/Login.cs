@@ -14,9 +14,14 @@ namespace FeesManagement.Views
 	{
 		InputBox Password;
 		InputBox Username;
+		
 		public Login()
 		{
 			InitializeComponent();
+			
+			// input box is a custom component
+			// it handles chaging text colors
+			// when label is = to the text in the input box
 			Password = new InputBox("Password");
 			Username = new InputBox("Username");
 			
