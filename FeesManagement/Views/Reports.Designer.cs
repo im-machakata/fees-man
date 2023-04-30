@@ -39,7 +39,6 @@ namespace FeesManagement.Views
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.StudentReport = new System.Windows.Forms.TabControl();
 			this.StudentPage = new System.Windows.Forms.TabPage();
-			this.Exit1 = new System.Windows.Forms.Button();
 			this.StudentSurname1 = new System.Windows.Forms.Panel();
 			this.StudentName1 = new System.Windows.Forms.Panel();
 			this.studentBalanceBtn = new System.Windows.Forms.Button();
@@ -81,7 +80,6 @@ namespace FeesManagement.Views
 			// StudentPage
 			// 
 			this.StudentPage.BackColor = System.Drawing.Color.DarkSlateGray;
-			this.StudentPage.Controls.Add(this.Exit1);
 			this.StudentPage.Controls.Add(this.StudentSurname1);
 			this.StudentPage.Controls.Add(this.StudentName1);
 			this.StudentPage.Controls.Add(this.studentBalanceBtn);
@@ -93,17 +91,6 @@ namespace FeesManagement.Views
 			this.StudentPage.Size = new System.Drawing.Size(804, 321);
 			this.StudentPage.TabIndex = 0;
 			this.StudentPage.Text = "Student";
-			// 
-			// Exit1
-			// 
-			this.Exit1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Exit1.Location = new System.Drawing.Point(721, 6);
-			this.Exit1.Name = "Exit1";
-			this.Exit1.Size = new System.Drawing.Size(75, 23);
-			this.Exit1.TabIndex = 10;
-			this.Exit1.Text = "Exit";
-			this.Exit1.UseVisualStyleBackColor = true;
-			this.Exit1.Click += new System.EventHandler(this.Exit1Click);
 			// 
 			// StudentSurname1
 			// 
@@ -124,6 +111,7 @@ namespace FeesManagement.Views
 			// studentBalanceBtn
 			// 
 			this.studentBalanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.studentBalanceBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.studentBalanceBtn.Location = new System.Drawing.Point(19, 250);
 			this.studentBalanceBtn.Name = "studentBalanceBtn";
 			this.studentBalanceBtn.Size = new System.Drawing.Size(210, 47);
@@ -135,7 +123,7 @@ namespace FeesManagement.Views
 			// studentDescription
 			// 
 			this.studentDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.studentDescription.Location = new System.Drawing.Point(18, 17);
+			this.studentDescription.Location = new System.Drawing.Point(11, 17);
 			this.studentDescription.Name = "studentDescription";
 			this.studentDescription.Size = new System.Drawing.Size(211, 92);
 			this.studentDescription.TabIndex = 0;
@@ -211,7 +199,7 @@ namespace FeesManagement.Views
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(812, 347);
 			this.Controls.Add(this.panel1);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "Reports";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Reports";
@@ -222,7 +210,6 @@ namespace FeesManagement.Views
 			this.SchoolPage.ResumeLayout(false);
 			this.ResumeLayout(false);
 		}
-		private System.Windows.Forms.Button Exit1;
 		private System.Windows.Forms.Panel StudentName1;
 		private System.Windows.Forms.Panel StudentSurname1;
 		private System.Windows.Forms.Label schoolDescription;
