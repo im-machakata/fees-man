@@ -8,20 +8,23 @@ namespace FeesManagement.Components
 {
 	public partial class InputBox : UserControl
 	{
-		string Label;
+		string IBLabel;
 		string Input;
 		InputBox FocusNext;
 		
 		public string Value {
 			get { return Input; }
 		}
+		public string Label {
+			get { return IBLabel; }
+		}
 		
 		public InputBox(string InputLabel)
 		{
 			InitializeComponent();
-			Label = InputLabel;
+			IBLabel = InputLabel;
 			FocusNext = null;
-			SetText(Label);
+			SetText(IBLabel);
 		}
 		public void SetWidth(int Value){
 			Width = Value;
@@ -39,7 +42,7 @@ namespace FeesManagement.Components
 			ILabel.Focus();
 		}
 		public bool IsLabel(){
-			return ILabel.Text.Trim() == Label;
+			return ILabel.Text.Trim() == IBLabel;
 		}
 		void ChangeLabelColor(){
 			var SetDefaultColor = Validation.isEmpty(ILabel) || IsLabel();
@@ -47,13 +50,13 @@ namespace FeesManagement.Components
 		}
 		void SetupLabel(){
 			if(Validation.isEmpty(ILabel) || IsLabel()){
-				ILabel.Text = Label;
+				ILabel.Text = IBLabel;
 			}
 		}
 		void ILabelEnter(object sender, EventArgs e)
 		{
 			// clear username in equals default
-			if(Validation.isLabel(ILabel, Label)){
+			if(Validation.isLabel(ILabel, IBLabel)){
 				ILabel.Clear();
 			}
 			ChangeLabelColor();
