@@ -17,7 +17,6 @@ namespace FeesManagement.Utils
 			} catch (NullReferenceException) {
 				return true;
 			}
-			return true;
 		}
 	}
 }
