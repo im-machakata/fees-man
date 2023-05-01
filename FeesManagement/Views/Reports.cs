@@ -50,11 +50,16 @@ namespace FeesManagement.Views
         {
         	var exists = Schools.ContainsKey(name) ? Schools[name] : null;
             if(exists == null && add) {
-            	var school = new School();
-            	Schools[name] = school;
-                return school;
+        		exists = CreateSchool(name);
             }
             return exists;
+        }
+        public School CreateSchool(string name){
+        	name = name.Trim();
+        	if(!Schools.ContainsKey(name)){
+            	Schools[name] = new School();
+            }
+            return Schools[name];
         }
 
         public void AddStudentToClass(Student student, string className)
@@ -87,9 +92,9 @@ namespace FeesManagement.Views
 			
 			// validate
 			if(Validation.isEmpty(Name) || IBStudentName.IsLabel()){
-				Res.Message = "Enter a student surname";
-			} else if(Validation.isEmpty(IBStudentName.Value) || IBStudentSurname.IsLabel()){
 				Res.Message = "Enter a student name";
+			} else if(Validation.isEmpty(IBStudentName.Value) || IBStudentSurname.IsLabel()){
+				Res.Message = "Enter a student surname";
 			} else if (!Schools["Junior High"].StudentExists(Name,Surname)) {
 				Res.Message = "Student not found.";
 			} else {
@@ -98,6 +103,9 @@ namespace FeesManagement.Views
 			
 			if(Res.HasError){
 				MessageBox.Show(Res.Message, "Alert");
+			} else {
+				
+				// get student & display their balance
 			}
 		}
 		
