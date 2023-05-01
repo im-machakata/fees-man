@@ -2,11 +2,13 @@
 
 **DISCLAIMER:** This is Work In Progess, functionality and features may be broken or still under development.
 
+## About App
+
 Simple login and reports generation for a single student, an entire class or the entire school when requested.
 
 ## Folder Structure
 
-The projects contains two types of folders. These are GitHub folders and System folders.
+The projects contains two types of folders &ndash; GitHub and System folders.
 
 ### Github Files
 
@@ -38,10 +40,10 @@ These data types have been initialized in the **Reports** form under Views and t
 public Dictionary<string,School> Schools = new Dictionary<string,School>();
 
 // create a new school
-Schools["Junior High"] = new School();
+Schools["School Name"] = new School();
 
 // add a new student
-Schools["Junior High"].Add(Student);
+Schools["School Name"].Add(Student);
 
 // Student & School are classes
 // defined in the Models folder
