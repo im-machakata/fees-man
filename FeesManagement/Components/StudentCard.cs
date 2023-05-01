@@ -15,7 +15,8 @@ namespace FeesManagement.Components
 			StudentSurname.Text = Surname;
 			
 			// set text color
-			// for some reason, it's white :(
+			// it's white because of the 
+			// forecolor set on the parent
 			StudentName.ForeColor = Color.Black;
 			StudentSurname.ForeColor = Color.Black;
 		}
