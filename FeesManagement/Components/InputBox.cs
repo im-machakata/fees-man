@@ -35,7 +35,7 @@ namespace FeesManagement.Components
 		public void FocusBox(InputBox Nxt){
 			FocusNext = Nxt;
 		}
-		public void Focus(){
+		public new void Focus(){
 			ILabel.Focus();
 		}
 		void ChangeLabelColor(){
