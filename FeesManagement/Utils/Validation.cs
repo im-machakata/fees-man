@@ -12,7 +12,12 @@ namespace FeesManagement.Utils
 			return input.Text.Trim() == null || input.Text.Trim() == "";
 		}
 		public static bool isEmpty(string input){
-			return input.Trim() == null || input.Trim() == "";
+			try {
+				return input.Trim() == null || input.Trim() == "";
+			} catch (NullReferenceException) {
+				return true;
+			}
+			return true;
 		}
 	}
 }
