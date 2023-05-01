@@ -18,6 +18,7 @@ namespace FeesManagement.Views
 		// define inputs
 		InputBox IBStudentName;
 		InputBox IBStudentSurname;
+		StudentCard IBStudentResults;
 
         public Reports()
         {
@@ -25,13 +26,19 @@ namespace FeesManagement.Views
             Schools = new Dictionary<string,School>();
             
             // initialize inputs
+            IBStudentResults = new StudentCard("Name","Surname");
             IBStudentSurname = new InputBox("Student surname");
             IBStudentName = new InputBox("Student name");
             
+            // adjust inputs width size
             IBStudentSurname.SetWidth(210);
             IBStudentName.SetWidth(210);
             
+            //bind enter key for the first input box
+            IBStudentName.FocusBox(IBStudentSurname);
+            
             // add to view
+           StudentResults1.Controls.Add(IBStudentResults);
            StudentSurname1.Controls.Add(IBStudentSurname);
            StudentName1.Controls.Add(IBStudentName);
            SeedData();
@@ -105,11 +112,6 @@ namespace FeesManagement.Views
 //			} else {
 //				// calculate balance
 //			}
-		}
-		
-		void Exit1Click(object sender, EventArgs e)
-		{
-			Close();
 		}
 	}
 }
