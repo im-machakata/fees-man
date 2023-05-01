@@ -38,6 +38,9 @@ namespace FeesManagement.Components
 		public new void Focus(){
 			ILabel.Focus();
 		}
+		public bool IsLabel(){
+			return ILabel.Text.Trim() == Label;
+		}
 		void ChangeLabelColor(){
 			var IsLabel = Validation.isEmpty(ILabel) || Validation.isLabel(ILabel,Label);
 			ILabel.ForeColor = Color.FromKnownColor(IsLabel ? KnownColor.ScrollBar : KnownColor.ControlText);
