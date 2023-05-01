@@ -68,12 +68,17 @@
     <Compile Include="Components\InputBox.Designer.cs">
       <DependentUpon>InputBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\SchoolCard.cs" />
+    <Compile Include="Components\SchoolCard.Designer.cs">
+      <DependentUpon>SchoolCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\StudentCard.cs" />
     <Compile Include="Components\StudentCard.Designer.cs">
       <DependentUpon>StudentCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Classes.cs" />
     <Compile Include="Models\Config.cs" />
+    <Compile Include="Models\Response.cs" />
     <Compile Include="Models\School.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Program.cs" />
@@ -91,6 +96,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Components\InputBox.resx">
       <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\SchoolCard.resx">
+      <DependentUpon>SchoolCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\StudentCard.resx">
       <DependentUpon>StudentCard.cs</DependentUpon>
