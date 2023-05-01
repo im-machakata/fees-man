@@ -7,11 +7,11 @@ namespace FeesManagement.Components
 {
 	public partial class SchoolCard : UserControl
 	{
-		public SchoolCard(string SchoolName)
+		public SchoolCard(string SName)
 		{
 			InitializeComponent();
-			Name.Text = SchoolName;
-			Name.ForeColor = Color.Black;
+			SchoolName.Text = SName;
+			SchoolName.ForeColor = Color.Black;
 		}
 	}
 }

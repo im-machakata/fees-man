@@ -38,7 +38,7 @@ namespace FeesManagement.Components
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SchoolCard));
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.Name = new System.Windows.Forms.Label();
+			this.SchoolName = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -54,21 +54,21 @@ namespace FeesManagement.Components
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
 			// 
-			// Name
+			// SchoolName
 			// 
-			this.Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Name.Location = new System.Drawing.Point(3, 74);
-			this.Name.Name = "Name";
-			this.Name.Size = new System.Drawing.Size(147, 103);
-			this.Name.TabIndex = 1;
-			this.Name.Text = "School Name";
-			this.Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.SchoolName.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.SchoolName.Location = new System.Drawing.Point(3, 74);
+			this.SchoolName.Name = "SchoolName";
+			this.SchoolName.Size = new System.Drawing.Size(147, 103);
+			this.SchoolName.TabIndex = 1;
+			this.SchoolName.Text = "School Name";
+			this.SchoolName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.White;
 			this.panel1.Controls.Add(this.pictureBox1);
-			this.panel1.Controls.Add(this.Name);
+			this.panel1.Controls.Add(this.SchoolName);
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(153, 177);
@@ -87,7 +87,7 @@ namespace FeesManagement.Components
 			this.ResumeLayout(false);
 		}
 		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.Label Name;
+		private System.Windows.Forms.Label SchoolName;
 		private System.Windows.Forms.PictureBox pictureBox1;
 	}
 }
