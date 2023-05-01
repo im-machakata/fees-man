@@ -42,11 +42,11 @@ namespace FeesManagement.Components
 			return ILabel.Text.Trim() == Label;
 		}
 		void ChangeLabelColor(){
-			var IsLabel = Validation.isEmpty(ILabel) || Validation.isLabel(ILabel,Label);
-			ILabel.ForeColor = Color.FromKnownColor(IsLabel ? KnownColor.ScrollBar : KnownColor.ControlText);
+			var SetDefaultColor = Validation.isEmpty(ILabel) || IsLabel();
+			ILabel.ForeColor = Color.FromKnownColor(SetDefaultColor ? KnownColor.ScrollBar : KnownColor.ControlText);
 		}
 		void SetupLabel(){
-			if(Validation.isEmpty(ILabel) || Validation.isLabel(ILabel,Label)){
+			if(Validation.isEmpty(ILabel) || IsLabel()){
 				ILabel.Text = Label;
 			}
 		}
