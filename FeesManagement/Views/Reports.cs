@@ -86,9 +86,9 @@ namespace FeesManagement.Views
 			Response Res = new Response { HasError = true };
 			
 			// validate
-			if(Validation.isEmpty(Name)){
+			if(Validation.isEmpty(Name) || IBStudentName.IsLabel()){
 				Res.Message = "Enter a student surname";
-			} else if(Validation.isEmpty(IBStudentName.Value)){
+			} else if(Validation.isEmpty(IBStudentName.Value) || IBStudentSurname.IsLabel()){
 				Res.Message = "Enter a student name";
 			} else if (!Schools["Junior High"].StudentExists(Name,Surname)) {
 				Res.Message = "Student not found.";
