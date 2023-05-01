@@ -6,12 +6,18 @@ using System.Windows.Forms;
 namespace FeesManagement.Components
 {
 	public partial class StudentCard : UserControl
-	{
-		public StudentCard(string name, string surname)
+	{		
+		public StudentCard(string Name, string Surname)
 		{
-			InitializeComponent();	
-			studentName.Text = name;
-			studentSurname.Text = surname;
+			InitializeComponent();
+			// set text
+			StudentName.Text = Name;
+			StudentSurname.Text = Surname;
+			
+			// set text color
+			// for some reason, it's white :(
+			StudentName.ForeColor = Color.Black;
+			StudentSurname.ForeColor = Color.Black;
 		}
 	}
 }
