@@ -56,7 +56,7 @@ namespace FeesManagement.Models
         	return false;
         }
         
-        public bool EnrollStudent(string name,string surname,int classNumber){
+        public bool Enroll(string name,string surname,int classNumber){
         	Student student = new Student();
         	student.Name = name;
         	student.Surname = surname;
@@ -64,7 +64,7 @@ namespace FeesManagement.Models
         	
         	if(!StudentExists(name,surname)){
         	    // generate user id
-        	    student.ID = GenerateUID(classNumber);
+        	    student.ID = UID(classNumber);
 
                 // add to temporary memory db
                 Students[classNumber.ToString()].Add(student);
@@ -77,7 +77,7 @@ namespace FeesManagement.Models
         	return Students.Keys.ToList();
         }
         
-        int GenerateUID(int _class){
+        int UID(int _class){
         	return StudentIDs[_class] .Count();
         }
     }
