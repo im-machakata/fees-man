@@ -41,6 +41,7 @@ namespace FeesManagement.Views
            StudentResults1.Controls.Add(IBStudentResults);
            StudentSurname1.Controls.Add(IBStudentSurname);
            StudentName1.Controls.Add(IBStudentName);
+           
            SeedData();
         }
 
@@ -72,25 +73,31 @@ namespace FeesManagement.Views
         
         // create dummy data
         void SeedData(){
-        	Schools["Shakashe High"] = new School();
-        	Schools["Madyangove High"] = new School();
+        	
+        	// we will use one school for the meantime
+        	// but more school can be added this way
+        	Schools["Junior High"] = new School();
         }
 		
 		void StudentBalanceBtnClick(object sender, EventArgs e)
 		{
-			// filter student balance	
-			// TODO
-			if(Validation.isEmpty(IBStudentSurname.Value)){
-				MessageBox.Show("Enter a student surname","Alert");
-				
-				// TODO
+			var Name = IBStudentName.Value;
+			var Surname = IBStudentSurname.Value;
+			Response Res = new Response { HasError = true };
+			
+			// validate
+			if(Validation.isEmpty(Name)){
+				Res.Message = "Enter a student surname";
 			} else if(Validation.isEmpty(IBStudentName.Value)){
-				MessageBox.Show("Enter a student name","Alert");
-				
-				// TODO
+				Res.Message = "Enter a student name";
+			} else if (!Schools["Junior High"].StudentExists(Name,Surname)) {
+				Res.Message = "Student not found.";
 			} else {
-				// calculate balance
-				// studentBalance.Text = "";
+				Res.HasError = false;
+			}
+			
+			if(Res.HasError){
+				MessageBox.Show(Res.Message, "Alert");
 			}
 		}
 		
