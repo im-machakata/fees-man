@@ -36,20 +36,31 @@ Lists can be described as 1D Arrays of one type while Dictionaries are Objects t
 These data types have been initialized in the **Reports** form under Views and they look something like this:
 
 ```cs
-// initialize
+/**
+*********************************
+* file: Reports.cs
+*********************************
+* Student & School are classes
+* defined in the Models folder 
+* while .Students is a List in
+* the School class
+*/
+
+/** initialize **/
 public Dictionary<string,School> Schools = new Dictionary<string,School>();
 
-// create a new school
-Schools["School Name"] = new School();
+/** create a new school **/
+CreateSchool("School Name");
 
-// add a new student
-Schools["School Name"].Add(Student);
-
-// Student & School are classes
-// defined in the Models folder
+/** add a new student **/
+Schools["School Name"].Students.Add(Student);
 ```
 
 Custom functionality for searching students has been written in the (Schools) models file(s) in a less confusing way though it can be refactored.
+
+## Issues &amp; Impovements
+
+Since the data is stored in memory, it is resetted every time the application is restarted. To fix this, we need to use a persistent database.
 
 ## Icons Used
 
