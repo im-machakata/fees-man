@@ -10,6 +10,7 @@ namespace FeesManagement.Components
 	{
 		string Label;
 		string Input;
+		InputBox FocusNext;
 		
 		public string Value {
 			get { return Input; }
@@ -19,6 +20,7 @@ namespace FeesManagement.Components
 		{
 			InitializeComponent();
 			Label = InputLabel;
+			FocusNext = null;
 			SetText(Label);
 		}
 		public void SetWidth(int Value){
@@ -29,6 +31,12 @@ namespace FeesManagement.Components
 		public void SetText(string Label){
 			ILabel.Text = Label;
 			ChangeLabelColor();
+		}
+		public void FocusBox(InputBox Nxt){
+			FocusNext = Nxt;
+		}
+		public void Focus(){
+			ILabel.Focus();
 		}
 		void ChangeLabelColor(){
 			var IsLabel = Validation.isEmpty(ILabel) || Validation.isLabel(ILabel,Label);
@@ -59,6 +67,9 @@ namespace FeesManagement.Components
 		void ILabelKeyUp(object sender, KeyEventArgs e)
 		{
 			ChangeLabelColor();
+			if(e.KeyCode == Keys.Enter && FocusNext != null){
+				FocusNext.Focus();
+			}
 		}
 		
 		void ILabelKeyPress(object sender, KeyPressEventArgs e)

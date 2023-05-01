@@ -78,6 +78,7 @@ namespace FeesManagement.Views
 			// loginBtn
 			// 
 			this.loginBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.loginBtn.FlatAppearance.BorderSize = 0;
 			this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

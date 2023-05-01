@@ -30,6 +30,8 @@ namespace FeesManagement.Views
 			
 			UsernamePanel.Controls.Add(Username);
 			PasswordPanel.Controls.Add(Password);
+			
+			Username.FocusBox(Password);
 		}
 		
 		// Verify if the username & password are correct
