@@ -62,27 +62,24 @@ namespace FeesManagement.Views
             return Schools[name];
         }
 
-        public void AddStudent(Student student, string className)
+        public void AddStudent(string name, string surname, int className,string schoolName)
         {
-        	var school = FindSchool(className,true);
-            school.Enroll(student.Name, student.Surname, student.ClassName);
+        	var school = FindSchool(schoolName,true);
+            school.Enroll(name, surname, className);
         }
         
         void LoadStudents(){
-        	// load default students
+        	Schools["Junior High"] = new School();
         }
         
         void LoadClassess(){
-        	//
+        	AddStudent("John","Deere",1,"Junior High");
         }
         
         // create dummy data
         void SeedData(){
-        	
-        	// we will use one school for the meantime
-        	// but more school can be added this way
-        	Schools["Junior High"] = new School();
-        	// AddStudent();
+        	LoadClassess();
+        	LoadStudents();
         }
 		
 		void StudentBalanceBtnClick(object sender, EventArgs e)
@@ -100,13 +97,14 @@ namespace FeesManagement.Views
 				Results.Message = "Student not found.";
 			} else {
 				Results.HasError = false;
+				var rand = new Random();
+				Results.Message = "$" + rand.NextDouble().ToString();
 			}
 			
 			if(Results.HasError){
 				MessageBox.Show(Results.Message, "Alert");
 			} else {
-				
-				// get student & display their balance
+				StudentBalance.Text = Results.Message;
 			}
 		}
 		

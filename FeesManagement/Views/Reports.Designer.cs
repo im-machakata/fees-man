@@ -39,6 +39,7 @@ namespace FeesManagement.Views
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.StudentReport = new System.Windows.Forms.TabControl();
 			this.StudentPage = new System.Windows.Forms.TabPage();
+			this.StudentBalance = new System.Windows.Forms.Label();
 			this.StudentResults1 = new System.Windows.Forms.Panel();
 			this.StudentSurname1 = new System.Windows.Forms.Panel();
 			this.StudentName1 = new System.Windows.Forms.Panel();
@@ -47,11 +48,11 @@ namespace FeesManagement.Views
 			this.studentDescription = new System.Windows.Forms.Label();
 			this.ClassPage = new System.Windows.Forms.TabPage();
 			this.classFilterBtn = new System.Windows.Forms.Button();
+			this.label2 = new System.Windows.Forms.Label();
 			this.classDescription = new System.Windows.Forms.Label();
 			this.SchoolPage = new System.Windows.Forms.TabPage();
 			this.schoolFilterButton = new System.Windows.Forms.Button();
 			this.schoolDescription = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.StudentReport.SuspendLayout();
 			this.StudentPage.SuspendLayout();
@@ -83,6 +84,7 @@ namespace FeesManagement.Views
 			// StudentPage
 			// 
 			this.StudentPage.BackColor = System.Drawing.Color.DarkSlateGray;
+			this.StudentPage.Controls.Add(this.StudentBalance);
 			this.StudentPage.Controls.Add(this.StudentResults1);
 			this.StudentPage.Controls.Add(this.StudentSurname1);
 			this.StudentPage.Controls.Add(this.StudentName1);
@@ -96,6 +98,19 @@ namespace FeesManagement.Views
 			this.StudentPage.Size = new System.Drawing.Size(775, 321);
 			this.StudentPage.TabIndex = 0;
 			this.StudentPage.Text = "Student";
+			// 
+			// StudentBalance
+			// 
+			this.StudentBalance.BackColor = System.Drawing.Color.White;
+			this.StudentBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.StudentBalance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.StudentBalance.Location = new System.Drawing.Point(255, 190);
+			this.StudentBalance.Name = "StudentBalance";
+			this.StudentBalance.Padding = new System.Windows.Forms.Padding(8);
+			this.StudentBalance.Size = new System.Drawing.Size(500, 79);
+			this.StudentBalance.TabIndex = 11;
+			this.StudentBalance.Text = "$0.00";
+			this.StudentBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// StudentResults1
 			// 
@@ -177,6 +192,15 @@ namespace FeesManagement.Views
 			this.classFilterBtn.UseVisualStyleBackColor = true;
 			this.classFilterBtn.Click += new System.EventHandler(this.ClassFilterBtnClick);
 			// 
+			// label2
+			// 
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(28, 59);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(423, 22);
+			this.label2.TabIndex = 4;
+			this.label2.Text = "Type a class name and view its balance ";
+			// 
 			// classDescription
 			// 
 			this.classDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -219,15 +243,6 @@ namespace FeesManagement.Views
 			this.schoolDescription.TabIndex = 4;
 			this.schoolDescription.Text = "Showing balance for: ";
 			// 
-			// label2
-			// 
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(28, 59);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(423, 22);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "Type a class name and view its balance ";
-			// 
 			// Reports
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,6 +260,7 @@ namespace FeesManagement.Views
 			this.SchoolPage.ResumeLayout(false);
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Label StudentBalance;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Panel StudentResults1;
