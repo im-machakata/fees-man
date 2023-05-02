@@ -13,33 +13,37 @@ namespace FeesManagement.Models
         // the number of id each class has
         private Dictionary<int,string> StudentIDs { get; set; }
         
-        public Dictionary<string, List<Student> > Students { get; set; }
+        public Dictionary<int, List<Student> > Students { get; set; }
 
         public School()
         {
             Classes = new Classes();
-            Students = new Dictionary<string,List<Student>>();
+            Students = new Dictionary<int,List<Student>>();
             StudentIDs = new Dictionary<int,string>();
         }
 
-        public bool StudentExists(string name, string surname){
+        public Student GetStudentDetails(string name, string surname){
         	foreach (var className in Students.Keys) {
         		
         		// get class list
         		var classList = Students[className]; 
         		
+        		if(classList == null){
+        			return null;
+        		}
+        		
                 // find student using name & surname
         		foreach(var student in classList){
 
                     if(student.Name == name && student.Surname == surname) {
-        			    return true;
+        			    return student;
         		    }
                 }
         	}
-        	return false;
+        	return null;
         }
-
-        public bool StudentExists(int ID){
+        
+        public Student GetStudentDetails(int ID){
         	foreach (var className in Students.Keys) {
         		
         		// get class list
@@ -49,11 +53,19 @@ namespace FeesManagement.Models
         		foreach(var student in classList){
 
                     if(student.ID == ID) {
-        			    return true;
+        			    return student;
         		    }
                 }
         	}
-        	return false;
+        	return null;
+        }
+        
+        public bool StudentExists(string name, string surname){
+        	return GetStudentDetails(name,surname) != null;
+        }
+
+        public bool StudentExists(int ID){
+        	return GetStudentDetails(ID) != null;
         }
         
         public bool Enroll(string name,string surname,int classNumber){
@@ -62,23 +74,27 @@ namespace FeesManagement.Models
         	student.Surname = surname;
         	Classes _class = new Classes();
         	
+        	if (!Students.ContainsKey(classNumber)){
+        		Students[classNumber] = new List<Student>();
+        	}
+        	
         	if(!StudentExists(name,surname)){
         	    // generate user id
         	    student.ID = UID(classNumber);
 
                 // add to temporary memory db
-                Students[classNumber.ToString()].Add(student);
-        		StudentIDs.Add(classNumber,_class.getClass(classNumber));
+                Students[classNumber].Add(student);
+        		StudentIDs.Add(classNumber,_class.GetClass(classNumber));
         	}
         	return true;
         }
         
-        public List<string> GetClasses(){
+        public List<int> GetClasses(){
         	return Students.Keys.ToList();
         }
         
         int UID(int _class){
-        	return StudentIDs[_class] .Count();
+        	return StudentIDs.ContainsKey(_class) ? StudentIDs[_class].Count() : 1;
         }
     }
 }
