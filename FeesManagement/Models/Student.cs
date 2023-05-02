@@ -18,6 +18,7 @@ namespace FeesManagement.Models
 	    public string Surname { get; set; }
 	    public int ClassName { get; set; }
 	    public decimal FeesBalance { get; set; }
+	    public string Gender { get; set; }
 	    
 	    string PrepareUserID(string id){
 	    	if( id.Length > 999) {
