@@ -23,14 +23,7 @@ namespace FeesManagement.Models
         }
 
         public Student GetStudentDetails(string name, string surname){
-        	foreach (var className in Students.Keys) {
-        		
-        		// get class list
-        		var classList = Students[className]; 
-        		
-        		if(classList == null){
-        			return null;
-        		}
+        	foreach (var classList in Students.Values) {
         		
                 // find student using name & surname
         		foreach(var student in classList){
@@ -44,10 +37,7 @@ namespace FeesManagement.Models
         }
         
         public Student GetStudentDetails(int ID){
-        	foreach (var className in Students.Keys) {
-        		
-        		// get class list
-        		var classList = Students[className]; 
+        	foreach (var classList in Students.Values) {
         		
                 // find student using name & surname
         		foreach(var student in classList){
@@ -69,10 +59,11 @@ namespace FeesManagement.Models
         }
         
         public bool Enroll(string name,string surname,int classNumber){
+        	Classes _class = new Classes();
         	Student student = new Student();
+        	
         	student.Name = name;
         	student.Surname = surname;
-        	Classes _class = new Classes();
         	
         	if (!Students.ContainsKey(classNumber)){
         		Students[classNumber] = new List<Student>();
