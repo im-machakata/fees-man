@@ -20,5 +20,9 @@ namespace FeesManagement.Components
 			StudentName.ForeColor = Color.Black;
 			StudentSurname.ForeColor = Color.Black;
 		}
+		public void SetData(string Name, string Surname){
+			StudentName.Text = Name;
+			StudentSurname.Text = Surname;
+		}
 	}
 }

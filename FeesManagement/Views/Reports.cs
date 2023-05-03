@@ -98,13 +98,14 @@ namespace FeesManagement.Views
 			} else {
 				Results.HasError = false;
 				var rand = new Random();
-				Results.Message = "$" + rand.NextDouble().ToString();
+				Results.Message = "$" + Schools["Junior High"].GetStudentDetails(Name, Surname).FeesBalance;
 			}
 			
 			if(Results.HasError){
 				MessageBox.Show(Results.Message, "Alert");
 			} else {
 				StudentBalance.Text = Results.Message;
+				IBStudentResults.SetData(Name, Surname);
 			}
 		}
 		
