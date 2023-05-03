@@ -17,6 +17,7 @@ namespace FeesManagement.Views
 		
 		// define inputs
 		InputBox IBS_School;
+		SchoolCard School_Card;
 		InputBox IBClassName;
 		InputBox IBClassSchool;
 		InputBox IBStudentName;
@@ -122,6 +123,7 @@ namespace FeesManagement.Views
 			// school view setup
 			// initialize inputs
 			IBS_School = new InputBox("School");
+			School_Card = new SchoolCard("School");
 			
 			// adjust inputs width size
 			IBS_School.SetWidth(210);
@@ -134,6 +136,7 @@ namespace FeesManagement.Views
 
 			// add to view
 			SchoolFilterSchool.Controls.Add(IBS_School);
+			School_Card_Container.Controls.Add(School_Card);
 		}
 		
 		void StudentBalanceBtnClick(object sender, EventArgs e)
@@ -162,6 +165,12 @@ namespace FeesManagement.Views
 				StudentBalance.Text = Results.Message;
 				IBStudentResults.SetData(Name, Surname);
 			}
+		}
+		
+		void SchoolFilterButtonClick(object sender, EventArgs e)
+		{
+			var Balance = Schools["Junior High"].TotalFees();
+			SchoolTotal.Text = "$" + Balance.ToString("F2");		
 		}
 	}
 }

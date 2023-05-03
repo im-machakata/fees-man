@@ -49,7 +49,7 @@ namespace FeesManagement.Views
 			this.studentDescription = new System.Windows.Forms.Label();
 			this.ClassPage = new System.Windows.Forms.TabPage();
 			this.ClassTotal = new System.Windows.Forms.Label();
-			this.SchoolCardContainer = new System.Windows.Forms.Panel();
+			this.ClassCardContainer = new System.Windows.Forms.Panel();
 			this.ClassFilterClass = new System.Windows.Forms.Panel();
 			this.ClassFilterSchool = new System.Windows.Forms.Panel();
 			this.button1 = new System.Windows.Forms.Button();
@@ -57,9 +57,9 @@ namespace FeesManagement.Views
 			this.label4 = new System.Windows.Forms.Label();
 			this.SchoolPage = new System.Windows.Forms.TabPage();
 			this.SchoolTotal = new System.Windows.Forms.Label();
-			this.panel2 = new System.Windows.Forms.Panel();
+			this.School_Card_Container = new System.Windows.Forms.Panel();
 			this.SchoolFilterSchool = new System.Windows.Forms.Panel();
-			this.button2 = new System.Windows.Forms.Button();
+			this.SchoolFilterButton = new System.Windows.Forms.Button();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
@@ -189,7 +189,7 @@ namespace FeesManagement.Views
 			// 
 			this.ClassPage.BackColor = System.Drawing.Color.DarkSlateGray;
 			this.ClassPage.Controls.Add(this.ClassTotal);
-			this.ClassPage.Controls.Add(this.SchoolCardContainer);
+			this.ClassPage.Controls.Add(this.ClassCardContainer);
 			this.ClassPage.Controls.Add(this.ClassFilterClass);
 			this.ClassPage.Controls.Add(this.ClassFilterSchool);
 			this.ClassPage.Controls.Add(this.button1);
@@ -208,21 +208,21 @@ namespace FeesManagement.Views
 			this.ClassTotal.BackColor = System.Drawing.Color.White;
 			this.ClassTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.ClassTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.ClassTotal.Location = new System.Drawing.Point(259, 198);
+			this.ClassTotal.Location = new System.Drawing.Point(259, 109);
 			this.ClassTotal.Name = "ClassTotal";
 			this.ClassTotal.Padding = new System.Windows.Forms.Padding(8);
-			this.ClassTotal.Size = new System.Drawing.Size(500, 79);
+			this.ClassTotal.Size = new System.Drawing.Size(340, 99);
 			this.ClassTotal.TabIndex = 18;
 			this.ClassTotal.Text = "$0.00";
 			this.ClassTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// SchoolCardContainer
+			// ClassCardContainer
 			// 
-			this.SchoolCardContainer.BackColor = System.Drawing.Color.White;
-			this.SchoolCardContainer.Location = new System.Drawing.Point(259, 108);
-			this.SchoolCardContainer.Name = "SchoolCardContainer";
-			this.SchoolCardContainer.Size = new System.Drawing.Size(500, 80);
-			this.SchoolCardContainer.TabIndex = 17;
+			this.ClassCardContainer.BackColor = System.Drawing.Color.White;
+			this.ClassCardContainer.Location = new System.Drawing.Point(605, 20);
+			this.ClassCardContainer.Name = "ClassCardContainer";
+			this.ClassCardContainer.Size = new System.Drawing.Size(150, 188);
+			this.ClassCardContainer.TabIndex = 17;
 			// 
 			// ClassFilterClass
 			// 
@@ -244,7 +244,7 @@ namespace FeesManagement.Views
 			// 
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(22, 230);
+			this.button1.Location = new System.Drawing.Point(549, 223);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(210, 47);
 			this.button1.TabIndex = 14;
@@ -274,9 +274,9 @@ namespace FeesManagement.Views
 			// 
 			this.SchoolPage.BackColor = System.Drawing.Color.DarkSlateGray;
 			this.SchoolPage.Controls.Add(this.SchoolTotal);
-			this.SchoolPage.Controls.Add(this.panel2);
+			this.SchoolPage.Controls.Add(this.School_Card_Container);
 			this.SchoolPage.Controls.Add(this.SchoolFilterSchool);
-			this.SchoolPage.Controls.Add(this.button2);
+			this.SchoolPage.Controls.Add(this.SchoolFilterButton);
 			this.SchoolPage.Controls.Add(this.label6);
 			this.SchoolPage.Controls.Add(this.label7);
 			this.SchoolPage.ForeColor = System.Drawing.Color.White;
@@ -292,40 +292,41 @@ namespace FeesManagement.Views
 			this.SchoolTotal.BackColor = System.Drawing.Color.White;
 			this.SchoolTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.SchoolTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.SchoolTotal.Location = new System.Drawing.Point(259, 193);
+			this.SchoolTotal.Location = new System.Drawing.Point(249, 104);
 			this.SchoolTotal.Name = "SchoolTotal";
 			this.SchoolTotal.Padding = new System.Windows.Forms.Padding(8);
-			this.SchoolTotal.Size = new System.Drawing.Size(500, 79);
+			this.SchoolTotal.Size = new System.Drawing.Size(350, 104);
 			this.SchoolTotal.TabIndex = 18;
 			this.SchoolTotal.Text = "$0.00";
 			this.SchoolTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// panel2
+			// School_Card_Container
 			// 
-			this.panel2.BackColor = System.Drawing.Color.White;
-			this.panel2.Location = new System.Drawing.Point(259, 103);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(500, 80);
-			this.panel2.TabIndex = 17;
+			this.School_Card_Container.BackColor = System.Drawing.Color.White;
+			this.School_Card_Container.Location = new System.Drawing.Point(620, 20);
+			this.School_Card_Container.Name = "School_Card_Container";
+			this.School_Card_Container.Size = new System.Drawing.Size(125, 188);
+			this.School_Card_Container.TabIndex = 17;
 			// 
 			// SchoolFilterSchool
 			// 
 			this.SchoolFilterSchool.BackColor = System.Drawing.Color.White;
-			this.SchoolFilterSchool.Location = new System.Drawing.Point(22, 103);
+			this.SchoolFilterSchool.Location = new System.Drawing.Point(19, 104);
 			this.SchoolFilterSchool.Name = "SchoolFilterSchool";
 			this.SchoolFilterSchool.Size = new System.Drawing.Size(210, 39);
 			this.SchoolFilterSchool.TabIndex = 15;
 			// 
-			// button2
+			// SchoolFilterButton
 			// 
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.Location = new System.Drawing.Point(22, 165);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(210, 47);
-			this.button2.TabIndex = 14;
-			this.button2.Text = "Find Balance";
-			this.button2.UseVisualStyleBackColor = true;
+			this.SchoolFilterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.SchoolFilterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.SchoolFilterButton.Location = new System.Drawing.Point(19, 162);
+			this.SchoolFilterButton.Name = "SchoolFilterButton";
+			this.SchoolFilterButton.Size = new System.Drawing.Size(210, 47);
+			this.SchoolFilterButton.TabIndex = 14;
+			this.SchoolFilterButton.Text = "Find Balance";
+			this.SchoolFilterButton.UseVisualStyleBackColor = true;
+			this.SchoolFilterButton.Click += new System.EventHandler(this.SchoolFilterButtonClick);
 			// 
 			// label6
 			// 
@@ -366,16 +367,16 @@ namespace FeesManagement.Views
 		private System.Windows.Forms.Panel StudentSchool1;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button SchoolFilterButton;
 		private System.Windows.Forms.Panel SchoolFilterSchool;
-		private System.Windows.Forms.Panel panel2;
+		private System.Windows.Forms.Panel School_Card_Container;
 		private System.Windows.Forms.Label SchoolTotal;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Panel ClassFilterSchool;
 		private System.Windows.Forms.Panel ClassFilterClass;
-		private System.Windows.Forms.Panel SchoolCardContainer;
+		private System.Windows.Forms.Panel ClassCardContainer;
 		private System.Windows.Forms.Label StudentBalance;
 		private System.Windows.Forms.Label ClassTotal;
 		private System.Windows.Forms.Label label1;

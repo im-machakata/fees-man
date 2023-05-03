@@ -68,7 +68,7 @@ namespace FeesManagement.Components
 			// StudentName
 			// 
 			this.StudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.StudentName.Location = new System.Drawing.Point(80, 21);
+			this.StudentName.Location = new System.Drawing.Point(79, 21);
 			this.StudentName.Name = "StudentName";
 			this.StudentName.Size = new System.Drawing.Size(170, 24);
 			this.StudentName.TabIndex = 1;
