@@ -28,6 +28,7 @@ namespace FeesManagement.Components
 		}
 		public void EnableInput(bool enable){
 			ILabel.Enabled = enable;
+			UsernamePanel.BackColor = enable ? Color.White : Color.WhiteSmoke;
 		}
 		public void SetWidth(int Value){
 			Width = Value;
