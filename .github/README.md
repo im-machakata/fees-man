@@ -6,6 +6,10 @@
 
 Simple login and reports generation for a single student, an entire class or the entire school when requested.
 
+## Getting Started
+
+To get started, add a list of students manually in the Reports.cs code (found in Views folder) in the LoadStudents funtion. From there, you can add the student details as well as their fees arreas.
+
 ## Folder Structure
 
 The projects contains two types of folders &ndash; GitHub and System folders.
