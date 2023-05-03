@@ -59,12 +59,12 @@ namespace FeesManagement.Views
 			this.SchoolPage = new System.Windows.Forms.TabPage();
 			this.SchoolTotal = new System.Windows.Forms.Label();
 			this.School_Card_Container = new System.Windows.Forms.Panel();
+			this.SchoolName = new System.Windows.Forms.Label();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.SchoolFilterSchool = new System.Windows.Forms.Panel();
 			this.SchoolFilterButton = new System.Windows.Forms.Button();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.SchoolName = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.StudentReport.SuspendLayout();
 			this.StudentPage.SuspendLayout();
@@ -89,8 +89,11 @@ namespace FeesManagement.Views
 			this.StudentReport.Controls.Add(this.ClassPage);
 			this.StudentReport.Controls.Add(this.SchoolPage);
 			this.StudentReport.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.StudentReport.ItemSize = new System.Drawing.Size(50, 20);
 			this.StudentReport.Location = new System.Drawing.Point(0, 0);
+			this.StudentReport.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
 			this.StudentReport.Name = "StudentReport";
+			this.StudentReport.Padding = new System.Drawing.Point(8, 6);
 			this.StudentReport.SelectedIndex = 0;
 			this.StudentReport.Size = new System.Drawing.Size(783, 347);
 			this.StudentReport.TabIndex = 0;
@@ -107,10 +110,10 @@ namespace FeesManagement.Views
 			this.StudentPage.Controls.Add(this.label1);
 			this.StudentPage.Controls.Add(this.studentDescription);
 			this.StudentPage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.StudentPage.Location = new System.Drawing.Point(4, 22);
+			this.StudentPage.Location = new System.Drawing.Point(4, 24);
 			this.StudentPage.Name = "StudentPage";
 			this.StudentPage.Padding = new System.Windows.Forms.Padding(3);
-			this.StudentPage.Size = new System.Drawing.Size(775, 321);
+			this.StudentPage.Size = new System.Drawing.Size(775, 319);
 			this.StudentPage.TabIndex = 0;
 			this.StudentPage.Text = "Student";
 			// 
@@ -201,10 +204,10 @@ namespace FeesManagement.Views
 			this.ClassPage.Controls.Add(this.label3);
 			this.ClassPage.Controls.Add(this.label4);
 			this.ClassPage.ForeColor = System.Drawing.Color.White;
-			this.ClassPage.Location = new System.Drawing.Point(4, 22);
+			this.ClassPage.Location = new System.Drawing.Point(4, 28);
 			this.ClassPage.Name = "ClassPage";
 			this.ClassPage.Padding = new System.Windows.Forms.Padding(3);
-			this.ClassPage.Size = new System.Drawing.Size(775, 321);
+			this.ClassPage.Size = new System.Drawing.Size(775, 315);
 			this.ClassPage.TabIndex = 1;
 			this.ClassPage.Text = "Class";
 			// 
@@ -286,10 +289,10 @@ namespace FeesManagement.Views
 			this.SchoolPage.Controls.Add(this.label6);
 			this.SchoolPage.Controls.Add(this.label7);
 			this.SchoolPage.ForeColor = System.Drawing.Color.White;
-			this.SchoolPage.Location = new System.Drawing.Point(4, 22);
+			this.SchoolPage.Location = new System.Drawing.Point(4, 28);
 			this.SchoolPage.Name = "SchoolPage";
 			this.SchoolPage.Padding = new System.Windows.Forms.Padding(3);
-			this.SchoolPage.Size = new System.Drawing.Size(775, 321);
+			this.SchoolPage.Size = new System.Drawing.Size(775, 315);
 			this.SchoolPage.TabIndex = 2;
 			this.SchoolPage.Text = "School";
 			// 
@@ -315,6 +318,27 @@ namespace FeesManagement.Views
 			this.School_Card_Container.Name = "School_Card_Container";
 			this.School_Card_Container.Size = new System.Drawing.Size(125, 188);
 			this.School_Card_Container.TabIndex = 17;
+			// 
+			// SchoolName
+			// 
+			this.SchoolName.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+			this.SchoolName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.SchoolName.Location = new System.Drawing.Point(3, 113);
+			this.SchoolName.Name = "SchoolName";
+			this.SchoolName.Size = new System.Drawing.Size(119, 73);
+			this.SchoolName.TabIndex = 1;
+			this.SchoolName.Text = "Junior High";
+			this.SchoolName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(13, 14);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(100, 82);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
 			// 
 			// SchoolFilterSchool
 			// 
@@ -354,27 +378,6 @@ namespace FeesManagement.Views
 			this.label7.Size = new System.Drawing.Size(514, 53);
 			this.label7.TabIndex = 13;
 			this.label7.Text = "View school balance";
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(13, 14);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(100, 82);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
-			// 
-			// SchoolName
-			// 
-			this.SchoolName.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-			this.SchoolName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.SchoolName.Location = new System.Drawing.Point(3, 113);
-			this.SchoolName.Name = "SchoolName";
-			this.SchoolName.Size = new System.Drawing.Size(119, 73);
-			this.SchoolName.TabIndex = 1;
-			this.SchoolName.Text = "Junior High";
-			this.SchoolName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
 			// Reports
 			// 
