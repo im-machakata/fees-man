@@ -12,6 +12,23 @@ Simple login and reports generation for a single student, an entire class or the
 
 To get started, add a list of students manually in the Reports.cs code (found in Views folder) in the `LoadStudents()` function. From there, you can add the student details as well as their fees arreas.
 
+## Login Accounts
+
+Logins have been hardcoded into the `Config.cs` file. You can use the following accounts to login.
+
+Username|Password
+--|--
+block2023|2023
+
+## Students Accounts
+
+By default there are two predefined student accounts as in the `Reports.cs`
+
+Name | Surname | Balance
+--|--|--
+John|Doe|200
+Mary|Doe|<kbd>random</kbd>
+
 ## Folder Structure
 
 The projects contains two types of folders &ndash; GitHub and System folders.
@@ -69,4 +86,4 @@ Since the data is stored in memory, it is resetted every time the application is
 
 ## Icons Used
 
-All icons in this project were downloaded from [icons8](//Icons8.com).
+All icons in this project were downloaded from [icons8](//Icons8.com)
