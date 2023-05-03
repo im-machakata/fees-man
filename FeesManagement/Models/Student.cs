@@ -17,7 +17,7 @@ namespace FeesManagement.Models
 	    public string Name { get; set; }
 	    public string Surname { get; set; }
 	    public int ClassName { get; set; }
-	    public decimal FeesBalance { get; set; }
+	    public double FeesBalance { get; set; }
 	    public string Gender { get; set; }
 	    
 	    string PrepareUserID(string id){

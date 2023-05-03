@@ -38,7 +38,7 @@ namespace FeesManagement.Models
         public Student GetStudentDetails(int ID){
         	foreach (var classList in Students.Values) {
                 
-        	    var StudentResults = classList.SingleOrDefault(s => s.ID = ID);
+        	    var StudentResults = classList.SingleOrDefault(s => s.ID == ID);
         		
                 // find student using name & surname
                 if(StudentResults != null){
@@ -56,12 +56,19 @@ namespace FeesManagement.Models
         	return GetStudentDetails(ID) != null;
         }
         
-        public bool Enroll(string name,string surname,int classNumber){
+        public bool Enroll(string name,string surname,int classNumber,double fees = 0){
         	Classes _class = new Classes();
         	Student student = new Student();
         	
         	student.Name = name;
         	student.Surname = surname;
+   
+        	if(fees < 1.0){
+        		var rand = new Random();
+        		fees = rand.NextDouble()*100;
+        	}
+        	
+        	student.FeesBalance = fees;
         	
         	if (!Students.ContainsKey(classNumber)){
         		Students.Add(classNumber, new List<Student>());

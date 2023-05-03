@@ -62,10 +62,10 @@ namespace FeesManagement.Views
             return Schools[name];
         }
 
-        public void AddStudent(string name, string surname, int className,string schoolName)
+        public void AddStudent(string name, string surname, int className,string schoolName,double fees)
         {
         	var school = FindSchool(schoolName,true);
-            school.Enroll(name, surname, className);
+            school.Enroll(name, surname, className, fees);
         }
         
         void LoadSchools(){
@@ -73,7 +73,7 @@ namespace FeesManagement.Views
         }
         
         void LoadClassess(){
-        	AddStudent("John","Deer",1,"Junior High");
+        	AddStudent("John","Deer",1,"Junior High",200);
         }
         
         // create dummy data
