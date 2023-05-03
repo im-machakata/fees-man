@@ -16,6 +16,7 @@ namespace FeesManagement.Views
 		public Dictionary<string,School> Schools { get; set; }
 		
 		// define inputs
+		InputBox IBS_School;
 		InputBox IBClassName;
 		InputBox IBClassSchool;
 		InputBox IBStudentName;
@@ -28,6 +29,7 @@ namespace FeesManagement.Views
 			InitializeComponent();
 			Schools = new Dictionary<string,School>();
 			SetupStudentView();
+			SetupSchoolView();
 			SetupClassView();
 			SeedData();
 		}
@@ -118,6 +120,20 @@ namespace FeesManagement.Views
 		
 		void SetupSchoolView(){
 			// school view setup
+			// initialize inputs
+			IBS_School = new InputBox("School");
+			
+			// adjust inputs width size
+			IBS_School.SetWidth(210);
+			
+			// config view 
+			IBS_School.FocusBox(IBClassName);
+			
+			IBS_School.EnableInput(false);
+			IBS_School.SetText("Junior High");
+
+			// add to view
+			SchoolFilterSchool.Controls.Add(IBS_School);
 		}
 		
 		void StudentBalanceBtnClick(object sender, EventArgs e)
