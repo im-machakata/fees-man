@@ -72,8 +72,9 @@ namespace FeesManagement.Views
         	CreateSchool("Junior High");
         }
         
-        void LoadClassess(){
-        	AddStudent("John","Deer",1,"Junior High",200);
+        void LoadStudents(){
+        	AddStudent("Mary","Doe",1,"Junior High");
+        	AddStudent("John","Doe",1,"Junior High",200);
         }
         
         // create dummy data
