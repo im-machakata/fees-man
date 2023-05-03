@@ -44,20 +44,19 @@ These data types have been initialized in the **Reports** form under Views and t
 *********************************
 * file: Reports.cs
 *********************************
-* Student & School are classes
+* School is a class
 * defined in the Models folder 
-* while .Students is a List in
-* the School class
 */
 
-/** initialize **/
+/** initialize : this is like the database **/
 public Dictionary<string,School> Schools = new Dictionary<string,School>();
 
 /** create a new school **/
 CreateSchool("School Name");
 
 /** add a new student **/
-Schools["School Name"].Students.Add(Student);
+AddStudent("Mary","Doe",1,"Junior High");
+AddStudent("John","Doe",1,"Junior High",200);
 ```
 
 Custom functionality for searching students has been written in the (Schools) models file(s) in a less confusing way though it can be refactored.
@@ -68,4 +67,4 @@ Since the data is stored in memory, it is resetted every time the application is
 
 ## Icons Used
 
-All icons in this project were downloaded from [icons8](//Icons8.com)
+All icons in this project were downloaded from [icons8](//Icons8.com).
