@@ -62,7 +62,7 @@ namespace FeesManagement.Views
             return Schools[name];
         }
 
-        public void AddStudent(string name, string surname, int className,string schoolName,double fees)
+        public void AddStudent(string name, string surname, int className,string schoolName,double fees = 0)
         {
         	var school = FindSchool(schoolName,true);
             school.Enroll(name, surname, className, fees);
@@ -80,7 +80,7 @@ namespace FeesManagement.Views
         // create dummy data
         void SeedData(){
         	LoadSchools();
-        	LoadClassess();
+        	LoadStudents();
         }
 		
 		void StudentBalanceBtnClick(object sender, EventArgs e)
