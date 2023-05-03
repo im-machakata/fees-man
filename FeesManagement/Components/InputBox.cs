@@ -26,6 +26,9 @@ namespace FeesManagement.Components
 			FocusNext = null;
 			SetText(IBLabel);
 		}
+		public void EnableInput(bool enable){
+			ILabel.Enabled = enable;
+		}
 		public void SetWidth(int Value){
 			Width = Value;
 			ILabel.Width = Value - 25;
