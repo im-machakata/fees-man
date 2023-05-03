@@ -113,7 +113,7 @@ namespace FeesManagement.Views
 			// 
 			this.StudentBalance.BackColor = System.Drawing.Color.White;
 			this.StudentBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.StudentBalance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.StudentBalance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StudentBalance.Location = new System.Drawing.Point(255, 190);
 			this.StudentBalance.Name = "StudentBalance";
 			this.StudentBalance.Padding = new System.Windows.Forms.Padding(8);
@@ -207,7 +207,7 @@ namespace FeesManagement.Views
 			// 
 			this.ClassTotal.BackColor = System.Drawing.Color.White;
 			this.ClassTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.ClassTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.ClassTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ClassTotal.Location = new System.Drawing.Point(259, 109);
 			this.ClassTotal.Name = "ClassTotal";
 			this.ClassTotal.Padding = new System.Windows.Forms.Padding(8);
@@ -227,7 +227,7 @@ namespace FeesManagement.Views
 			// ClassFilterClass
 			// 
 			this.ClassFilterClass.BackColor = System.Drawing.Color.White;
-			this.ClassFilterClass.Location = new System.Drawing.Point(22, 169);
+			this.ClassFilterClass.Location = new System.Drawing.Point(19, 169);
 			this.ClassFilterClass.Name = "ClassFilterClass";
 			this.ClassFilterClass.Size = new System.Drawing.Size(210, 39);
 			this.ClassFilterClass.TabIndex = 16;
@@ -235,7 +235,7 @@ namespace FeesManagement.Views
 			// ClassFilterSchool
 			// 
 			this.ClassFilterSchool.BackColor = System.Drawing.Color.White;
-			this.ClassFilterSchool.Location = new System.Drawing.Point(22, 108);
+			this.ClassFilterSchool.Location = new System.Drawing.Point(19, 108);
 			this.ClassFilterSchool.Name = "ClassFilterSchool";
 			this.ClassFilterSchool.Size = new System.Drawing.Size(210, 39);
 			this.ClassFilterSchool.TabIndex = 15;
@@ -255,7 +255,7 @@ namespace FeesManagement.Views
 			// 
 			this.label3.BackColor = System.Drawing.Color.Transparent;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(19, 59);
+			this.label3.Location = new System.Drawing.Point(14, 59);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(514, 23);
 			this.label3.TabIndex = 12;
@@ -264,7 +264,7 @@ namespace FeesManagement.Views
 			// label4
 			// 
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(15, 20);
+			this.label4.Location = new System.Drawing.Point(10, 20);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(514, 53);
 			this.label4.TabIndex = 13;
@@ -291,7 +291,7 @@ namespace FeesManagement.Views
 			// 
 			this.SchoolTotal.BackColor = System.Drawing.Color.White;
 			this.SchoolTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.SchoolTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.SchoolTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.SchoolTotal.Location = new System.Drawing.Point(249, 104);
 			this.SchoolTotal.Name = "SchoolTotal";
 			this.SchoolTotal.Padding = new System.Windows.Forms.Padding(8);
