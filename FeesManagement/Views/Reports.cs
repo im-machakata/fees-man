@@ -17,7 +17,6 @@ namespace FeesManagement.Views
 		
 		// define inputs
 		InputBox IBS_School;
-		SchoolCard School_Card;
 		InputBox IBClassName;
 		InputBox IBClassSchool;
 		InputBox IBStudentName;
@@ -123,20 +122,15 @@ namespace FeesManagement.Views
 			// school view setup
 			// initialize inputs
 			IBS_School = new InputBox("School");
-			School_Card = new SchoolCard("School");
 			
 			// adjust inputs width size
 			IBS_School.SetWidth(210);
-			
-			// config view 
-			IBS_School.FocusBox(IBClassName);
 			
 			IBS_School.EnableInput(false);
 			IBS_School.SetText("Junior High");
 
 			// add to view
 			SchoolFilterSchool.Controls.Add(IBS_School);
-			School_Card_Container.Controls.Add(School_Card);
 		}
 		
 		void StudentBalanceBtnClick(object sender, EventArgs e)
@@ -169,13 +163,18 @@ namespace FeesManagement.Views
 		
 		void SchoolFilterButtonClick(object sender, EventArgs e)
 		{
-			var School = IBS_School.Value;
-			var Balance = Schools[School].TotalFees();
-			SchoolTotal.Text = "$" + Balance.ToString("F2");
-			// if(Schools.ContainsKey(School)){
-			// } else {
-			// 	MessageBox.Show("School not found!","Error",MessageBoxButtons.OK);
-			// }
+			if ((IBS_School != null) && (IBS_School.Value != null)) {
+				var School = IBS_School.Value.Trim();
+				if(School != null && Schools.ContainsKey(School)){
+					var Balance = Schools[School].TotalFees();
+					SchoolTotal.Text = "$" + Balance.ToString("F2");
+					SchoolName.Text = School;
+				} else {
+					MessageBox.Show("School not found!","Error",MessageBoxButtons.OK);
+				}
+			} else {
+				MessageBox.Show("An error occured value is null.","Error",MessageBoxButtons.OK);
+			}
 		}
 		
 		void ClassFilterBtnClick(object sender, EventArgs e)

@@ -36,6 +36,7 @@ namespace FeesManagement.Views
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reports));
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.StudentReport = new System.Windows.Forms.TabControl();
 			this.StudentPage = new System.Windows.Forms.TabPage();
@@ -62,11 +63,15 @@ namespace FeesManagement.Views
 			this.SchoolFilterButton = new System.Windows.Forms.Button();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.SchoolName = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.StudentReport.SuspendLayout();
 			this.StudentPage.SuspendLayout();
 			this.ClassPage.SuspendLayout();
 			this.SchoolPage.SuspendLayout();
+			this.School_Card_Container.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -304,6 +309,8 @@ namespace FeesManagement.Views
 			// School_Card_Container
 			// 
 			this.School_Card_Container.BackColor = System.Drawing.Color.White;
+			this.School_Card_Container.Controls.Add(this.SchoolName);
+			this.School_Card_Container.Controls.Add(this.pictureBox1);
 			this.School_Card_Container.Location = new System.Drawing.Point(620, 20);
 			this.School_Card_Container.Name = "School_Card_Container";
 			this.School_Card_Container.Size = new System.Drawing.Size(125, 188);
@@ -348,6 +355,27 @@ namespace FeesManagement.Views
 			this.label7.TabIndex = 13;
 			this.label7.Text = "View school balance";
 			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(13, 14);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(100, 82);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
+			// 
+			// SchoolName
+			// 
+			this.SchoolName.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+			this.SchoolName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.SchoolName.Location = new System.Drawing.Point(3, 113);
+			this.SchoolName.Name = "SchoolName";
+			this.SchoolName.Size = new System.Drawing.Size(119, 73);
+			this.SchoolName.TabIndex = 1;
+			this.SchoolName.Text = "Junior High";
+			this.SchoolName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
 			// Reports
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,8 +391,12 @@ namespace FeesManagement.Views
 			this.StudentPage.ResumeLayout(false);
 			this.ClassPage.ResumeLayout(false);
 			this.SchoolPage.ResumeLayout(false);
+			this.School_Card_Container.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Label SchoolName;
 		private System.Windows.Forms.Panel StudentSchool1;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label6;
