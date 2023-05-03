@@ -107,6 +107,7 @@ namespace FeesManagement.Models
         	Students[className].ForEach(student => total += student.FeesBalance);
         	return total;
         }
+        
         public List<int> GetClasses(){
         	return Students.Keys.ToList();
         }
