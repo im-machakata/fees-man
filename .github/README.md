@@ -1,5 +1,7 @@
 # Fees Management
 
+![login screenshot](./screenshot.jpg)
+
 **DISCLAIMER:** This is Work In Progess, functionality and features may be broken or still under development.
 
 ## About App
