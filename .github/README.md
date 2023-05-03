@@ -10,7 +10,7 @@ Simple login and reports generation for a single student, an entire class or the
 
 ## Getting Started
 
-To get started, add a list of students manually in the Reports.cs code (found in Views folder) in the LoadStudents funtion. From there, you can add the student details as well as their fees arreas.
+To get started, add a list of students manually in the Reports.cs code (found in Views folder) in the `LoadStudents()` function. From there, you can add the student details as well as their fees arreas.
 
 ## Folder Structure
 
