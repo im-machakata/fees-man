@@ -68,18 +68,18 @@ namespace FeesManagement.Views
             school.Enroll(name, surname, className);
         }
         
-        void LoadStudents(){
-        	Schools["Junior High"] = new School();
+        void LoadSchools(){
+        	CreateSchool("Junior High");
         }
         
         void LoadClassess(){
-        	AddStudent("John","Deere",1,"Junior High");
+        	AddStudent("John","Deer",1,"Junior High");
         }
         
         // create dummy data
         void SeedData(){
+        	LoadSchools();
         	LoadClassess();
-        	LoadStudents();
         }
 		
 		void StudentBalanceBtnClick(object sender, EventArgs e)

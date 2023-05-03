@@ -23,14 +23,14 @@ namespace FeesManagement.Models
         }
 
         public Student GetStudentDetails(string name, string surname){
+
         	foreach (var classList in Students.Values) {
+                
+        	    var StudentResults = classList.SingleOrDefault(s => s.Name == name && s.Surname == surname);
         		
                 // find student using name & surname
-        		foreach(var student in classList){
-
-                    if(student.Name == name && student.Surname == surname) {
-        			    return student;
-        		    }
+                if(StudentResults != null){
+                	return StudentResults;
                 }
         	}
         	return null;
@@ -66,10 +66,10 @@ namespace FeesManagement.Models
         	student.Surname = surname;
         	
         	if (!Students.ContainsKey(classNumber)){
-        		Students[classNumber] = new List<Student>();
+        		Students.Add(classNumber, new List<Student>());
         	}
         	
-        	if(!StudentExists(name,surname)){
+        	if(!StudentExists(name, surname)){
         	    // generate user id
         	    student.ID = UID(classNumber);
 
