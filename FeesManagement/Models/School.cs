@@ -23,7 +23,6 @@ namespace FeesManagement.Models
         }
 
         public Student GetStudentDetails(string name, string surname){
-
         	foreach (var classList in Students.Values) {
                 
         	    var StudentResults = classList.SingleOrDefault(s => s.Name == name && s.Surname == surname);
@@ -38,13 +37,12 @@ namespace FeesManagement.Models
         
         public Student GetStudentDetails(int ID){
         	foreach (var classList in Students.Values) {
+                
+        	    var StudentResults = classList.SingleOrDefault(s => s.ID = ID);
         		
                 // find student using name & surname
-        		foreach(var student in classList){
-
-                    if(student.ID == ID) {
-        			    return student;
-        		    }
+                if(StudentResults != null){
+                	return StudentResults;
                 }
         	}
         	return null;
