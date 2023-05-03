@@ -169,8 +169,19 @@ namespace FeesManagement.Views
 		
 		void SchoolFilterButtonClick(object sender, EventArgs e)
 		{
+			var School = IBS_School.Value;
+			var Balance = Schools[School].TotalFees();
+			SchoolTotal.Text = "$" + Balance.ToString("F2");
+			// if(Schools.ContainsKey(School)){
+			// } else {
+			// 	MessageBox.Show("School not found!","Error",MessageBoxButtons.OK);
+			// }
+		}
+		
+		void ClassFilterBtnClick(object sender, EventArgs e)
+		{
 			var Balance = Schools["Junior High"].TotalFees();
-			SchoolTotal.Text = "$" + Balance.ToString("F2");		
+			SchoolTotal.Text = "$" + Balance.ToString("F2");
 		}
 	}
 }
