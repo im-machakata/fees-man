@@ -18,6 +18,7 @@ namespace FeesManagement.Views
 		// define inputs
 		InputBox IBStudentName;
 		InputBox IBStudentSurname;
+		InputBox IBStudentSchool;
 		StudentCard IBStudentResults;
 
         public Reports()
@@ -29,20 +30,26 @@ namespace FeesManagement.Views
             IBStudentResults = new StudentCard("Name","Surname");
             IBStudentSurname = new InputBox("Student surname");
             IBStudentName = new InputBox("Student name");
+            IBStudentSchool = new InputBox("School");
             
             // adjust inputs width size
             IBStudentSurname.SetWidth(210);
             IBStudentName.SetWidth(210);
+            IBStudentSchool.SetWidth(210);
             
             //bind enter key for the first input box
+            IBStudentSchool.FocusBox(IBStudentName);
             IBStudentName.FocusBox(IBStudentSurname);
             
             // add to view
-           StudentResults1.Controls.Add(IBStudentResults);
-           StudentSurname1.Controls.Add(IBStudentSurname);
-           StudentName1.Controls.Add(IBStudentName);
+            IBStudentSchool.EnableInput(false);
+            IBStudentSchool.SetText("Junior High");
+           	StudentSchool1.Controls.Add(IBStudentSchool);
+           	StudentResults1.Controls.Add(IBStudentResults);
+           	StudentSurname1.Controls.Add(IBStudentSurname);
+           	StudentName1.Controls.Add(IBStudentName);
            
-           SeedData();
+           	SeedData();
         }
 
         // find school by name & or create one
@@ -99,7 +106,8 @@ namespace FeesManagement.Views
 			} else {
 				Results.HasError = false;
 				var rand = new Random();
-				Results.Message = "$" + Schools["Junior High"].GetStudentDetails(Name, Surname).FeesBalance;
+				var Balance = Schools["Junior High"].GetStudentDetails(Name, Surname).FeesBalance;
+				Results.Message = "$" + Balance.ToString("F2");
 			}
 			
 			if(Results.HasError){
