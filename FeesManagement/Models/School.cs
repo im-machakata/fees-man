@@ -85,6 +85,20 @@ namespace FeesManagement.Models
         	return true;
         }
         
+        public double TotalFees(){
+        	double total = 0.0;
+        	foreach (var className in Students.Keys) {
+        		total = TotalFees(className);
+        	}
+        	return total;
+        }       
+        
+        public double TotalFees(int className){
+        	double total = 0.0;
+        	if (!Students.ContainsKey(className)){ return total; }
+        	Students[className].ForEach(student => total += student.FeesBalance);
+        	return total;
+        }
         public List<int> GetClasses(){
         	return Students.Keys.ToList();
         }
