@@ -37,6 +37,7 @@ namespace FeesManagement.Components
 		}
 		public void SetText(string Label){
 			ILabel.Text = Label;
+			Input = ILabel.Text.Trim();
 			ChangeLabelColor();
 		}
 		public void FocusBox(InputBox Nxt){
