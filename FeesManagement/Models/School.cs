@@ -11,7 +11,7 @@ namespace FeesManagement.Models
         // we will store student id in here
         // we use a dictionary to keep track of 
         // the number of id each class has
-        private Dictionary<int,string> StudentIDs { get; set; }
+        private Dictionary<int,int> StudentIDs { get; set; }
         
         public Dictionary<int, List<Student> > Students { get; set; }
 
@@ -19,7 +19,7 @@ namespace FeesManagement.Models
         {
             Classes = new Classes();
             Students = new Dictionary<int,List<Student>>();
-            StudentIDs = new Dictionary<int,string>();
+            StudentIDs = new Dictionary<int,int>();
         }
 
         public Student GetStudentDetails(string name, string surname){
@@ -80,7 +80,15 @@ namespace FeesManagement.Models
 
                 // add to temporary memory db
                 Students[classNumber].Add(student);
-        		StudentIDs.Add(classNumber,_class.GetClass(classNumber));
+                
+                var classListCount = Students[classNumber].Count;
+                
+                
+	        	if (!StudentIDs.ContainsKey(classNumber)){
+	        		StudentIDs.Add(classNumber, 1);
+                } else {
+                	StudentIDs[classNumber] = classListCount;
+                }
         	}
         	return true;
         }
@@ -104,7 +112,7 @@ namespace FeesManagement.Models
         }
         
         int UID(int _class){
-        	return StudentIDs.ContainsKey(_class) ? StudentIDs[_class].Count() : 1;
+        	return StudentIDs.ContainsKey(_class) ? StudentIDs[_class] : 1;
         }
     }
 }
