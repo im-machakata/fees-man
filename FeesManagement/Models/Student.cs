@@ -8,10 +8,10 @@ namespace FeesManagement.Models
 	{
 		int id;
 		
-		public int ID {
-			set { id = value; }
+		public string ID {
+			set { id = Int32.Parse(value); }
 			get { 
-				return Int16.Parse(PrepareUserID(id.ToString()));
+				return PrepareUserID(id.ToString());
 			}
 		}
 	    public string Name { get; set; }

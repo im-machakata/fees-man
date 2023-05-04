@@ -158,7 +158,7 @@ namespace FeesManagement.Views
 				MessageBox.Show(Results.Message, "Alert");
 			} else {
 				StudentBalance.Text = Results.Message;
-				IBStudentResults.SetData(Name, Surname);
+				IBStudentResults.SetText(Schools["GZUIS"].GetStudentDetails(Name,Surname));
 			}
 		}
 		

@@ -38,7 +38,7 @@ namespace FeesManagement.Models
         public Student GetStudentDetails(int ID){
         	foreach (var classList in Students.Values) {
                 
-        	    var StudentResults = classList.SingleOrDefault(s => s.ID == ID);
+        		var StudentResults = classList.SingleOrDefault(s => Int32.Parse(s.ID) == ID);
         		
                 // find student using name & surname
                 if(StudentResults != null){
@@ -76,7 +76,7 @@ namespace FeesManagement.Models
         	
         	if(!StudentExists(name, surname)){
         	    // generate user id
-        	    student.ID = UID(classNumber);
+        	    student.ID = UID(classNumber).ToString();
 
                 // add to temporary memory db
                 Students[classNumber].Add(student);
