@@ -19,7 +19,8 @@ namespace FeesManagement.Models
         	return this;
         }
         public string GetClass(int Grade){
-       		return ClassList[Grade];
+        	Grade++;
+        	return ClassList.ContainsKey(Grade) ? ClassList[Grade] : "Uknown Class "+ Grade;
         }
         void Seed(){
         	AddClass(1, "Form 1");
