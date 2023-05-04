@@ -96,7 +96,7 @@ namespace FeesManagement.Models
         public double TotalFees(){
         	double total = 0.0;
         	foreach (var className in Students.Keys) {
-        		total = TotalFees(className);
+        		total += TotalFees(className);
         	}
         	return total;
         }       
