@@ -2,7 +2,7 @@
 
 ![login screenshot](./screenshot.jpg)
 
-**DISCLAIMER:** While the basic features are working, there are some features that still need to be worked on.
+**DISCLAIMER:** While most of the basic features are working, there is still room for improvements.
 
 ## About App
 
