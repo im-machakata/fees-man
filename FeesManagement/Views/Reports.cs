@@ -179,8 +179,24 @@ namespace FeesManagement.Views
 		
 		void ClassFilterBtnClick(object sender, EventArgs e)
 		{
-			var Balance = Schools["Junior High"].TotalFees();
-			SchoolTotal.Text = "$" + Balance.ToString("F2");
+			var ClassName = IBClassName.Value;
+			Response Results = new Response { HasError = true };
+			
+			// validate
+			if(Validation.isEmpty(ClassName) || IBClassName.IsLabel()){
+				Results.Message = "Enter a student name";
+			} else {
+				Results.HasError = false;
+				var rand = new Random();
+				var Balance = Schools["Junior High"].TotalFees(Int32.Parse(ClassName));
+				Results.Message = "$" + Balance.ToString("F2");
+			}
+			
+			if(Results.HasError){
+				MessageBox.Show(Results.Message, "Alert");
+			} else {
+				ClassTotal.Text = Results.Message;
+			}
 		}
 	}
 }
