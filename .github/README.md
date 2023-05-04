@@ -2,7 +2,7 @@
 
 ![login screenshot](./screenshot.jpg)
 
-**DISCLAIMER:** This is Work In Progess, functionality and features may be broken or still under development.
+**DISCLAIMER:** While the basic features are working, there are some features that still need to be worked on.
 
 ## About App
 
