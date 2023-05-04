@@ -7,11 +7,6 @@ namespace FeesManagement.Models
     public class School
     {
     	public Classes Classes { get; set; }
-    	
-        // we will store student id in here
-        // we use a dictionary to keep track of 
-        // the number of id each class has
-        private Dictionary<int,int> StudentIDs { get; set; }
         
         public Dictionary<int, List<Student> > Students { get; set; }
 
@@ -19,7 +14,6 @@ namespace FeesManagement.Models
         {
             Classes = new Classes();
             Students = new Dictionary<int,List<Student>>();
-            StudentIDs = new Dictionary<int,int>();
         }
 
         public Student GetStudentDetails(string name, string surname){
@@ -75,20 +69,13 @@ namespace FeesManagement.Models
         	}
         	
         	if(!StudentExists(name, surname)){
+                var classListCount = Students[classNumber].Count + 1;
+                
         	    // generate user id
-        	    student.ID = UID(classNumber).ToString();
+        	    student.ID = PrepareUserID(classListCount.ToString(), classNumber);
 
                 // add to temporary memory db
                 Students[classNumber].Add(student);
-                
-                var classListCount = Students[classNumber].Count;
-                
-                
-	        	if (!StudentIDs.ContainsKey(classNumber)){
-	        		StudentIDs.Add(classNumber, 1);
-                } else {
-                	StudentIDs[classNumber] = classListCount;
-                }
         	}
         	return true;
         }
@@ -112,8 +99,11 @@ namespace FeesManagement.Models
         	return Students.Keys.ToList();
         }
         
-        int UID(int _class){
-        	return StudentIDs.ContainsKey(_class) ? StudentIDs[_class] : 1;
-        }
+        string PrepareUserID(string id, int className = 0){
+	    	if( id.Length == 3 && className != 0) {
+	    		return String.Concat(className.ToString(), id);
+	    	}
+	    	return PrepareUserID( String.Concat("0", id), className );
+	    }
     }
 }
