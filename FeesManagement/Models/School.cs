@@ -64,8 +64,8 @@ namespace FeesManagement.Models
         	student.Surname = surname;
    
         	if(fees < 1.0){
-        		var rand = new Random();
-        		fees = rand.NextDouble()*100;
+        		var rand = new Random(Guid.NewGuid().GetHashCode());
+        		fees = rand.NextDouble() * (500 - 100) + 100;
         	}
         	
         	student.FeesBalance = fees;
