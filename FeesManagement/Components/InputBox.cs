@@ -78,7 +78,7 @@ namespace FeesManagement.Components
 		void ILabelKeyUp(object sender, KeyEventArgs e)
 		{
 			ChangeLabelColor();
-			if(e.KeyCode == Keys.Enter && FocusNext != null){
+			if((e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab) && FocusNext != null){
 				FocusNext.Focus();
 			}
 		}
