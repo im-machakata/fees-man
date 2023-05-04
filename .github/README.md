@@ -30,6 +30,8 @@ John|Doe|200
 Mary|Doe|<kbd>random</kbd>
 John|Deere|<kbd>random</kbd>
 
+**NB**: The system is case-sensitive when searching for the acount balances of these students.
+
 ## Folder Structure
 
 The projects contains two types of folders &ndash; GitHub and System folders.
