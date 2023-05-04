@@ -58,13 +58,13 @@ namespace FeesManagement.Views
 		}
 		
 		void LoadSchools(){
-			CreateSchool("Junior High");
+			CreateSchool("GZUIS");
 		}
 		
 		void LoadStudents(){
-			AddStudent("Mary","Doe",1,"Junior High");
-			AddStudent("John","Doe",1,"Junior High",200);
-			AddStudent("John","Deere",2,"Junior High");
+			AddStudent("Mary","Doe",1,"GZUIS");
+			AddStudent("John","Doe",1,"GZUIS",200);
+			AddStudent("John","Deere",2,"GZUIS");
 		}
 		
 		// create dummy data
@@ -90,7 +90,7 @@ namespace FeesManagement.Views
 			IBStudentName.FocusBox(IBStudentSurname);
 			
 			IBStudentSchool.EnableInput(false);
-			IBStudentSchool.SetText("Junior High");
+			IBStudentSchool.SetText("GZUIS");
 
 			// add to view
 			StudentSchool1.Controls.Add(IBStudentSchool);
@@ -112,7 +112,7 @@ namespace FeesManagement.Views
 			IBClassSchool.FocusBox(IBClassName);
 			
 			IBClassSchool.EnableInput(false);
-			IBClassSchool.SetText("Junior High");
+			IBClassSchool.SetText("GZUIS");
 
 			// add to view
 			ClassFilterSchool.Controls.Add(IBClassSchool);
@@ -128,7 +128,7 @@ namespace FeesManagement.Views
 			IBS_School.SetWidth(210);
 			
 			IBS_School.EnableInput(false);
-			IBS_School.SetText("Junior High");
+			IBS_School.SetText("GZUIS");
 
 			// add to view
 			SchoolFilterSchool.Controls.Add(IBS_School);
@@ -145,12 +145,12 @@ namespace FeesManagement.Views
 				Results.Message = "Enter a student name";
 			} else if(Validation.isEmpty(IBStudentName.Value) || IBStudentSurname.IsLabel()){
 				Results.Message = "Enter a student surname";
-			} else if (!Schools["Junior High"].StudentExists(Name,Surname)) {
+			} else if (!Schools["GZUIS"].StudentExists(Name,Surname)) {
 				Results.Message = "Student not found.";
 			} else {
 				Results.HasError = false;
 				var rand = new Random();
-				var Balance = Schools["Junior High"].GetStudentDetails(Name, Surname).FeesBalance;
+				var Balance = Schools["GZUIS"].GetStudentDetails(Name, Surname).FeesBalance;
 				Results.Message = "$" + Balance.ToString("F2");
 			}
 			
@@ -189,7 +189,7 @@ namespace FeesManagement.Views
 			} else {
 				Results.HasError = false;
 				var rand = new Random();
-				var Balance = Schools["Junior High"].TotalFees(Int32.Parse(ClassName));
+				var Balance = Schools["GZUIS"].TotalFees(Int32.Parse(ClassName));
 				Results.Message = "$" + Balance.ToString("F2");
 			}
 			
