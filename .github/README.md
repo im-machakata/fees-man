@@ -28,6 +28,7 @@ Name | Surname | Balance
 --|--|--
 John|Doe|200
 Mary|Doe|<kbd>random</kbd>
+John|Deere|<kbd>random</kbd>
 
 ## Folder Structure
 
