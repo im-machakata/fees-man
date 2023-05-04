@@ -38,7 +38,9 @@ namespace FeesManagement.Components
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentCard));
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.SchoolId = new System.Windows.Forms.Label();
 			this.StudentSurname = new System.Windows.Forms.Label();
+			this.ClassName = new System.Windows.Forms.Label();
 			this.StudentName = new System.Windows.Forms.Label();
 			this.Icon = new System.Windows.Forms.PictureBox();
 			this.panel1.SuspendLayout();
@@ -48,13 +50,24 @@ namespace FeesManagement.Components
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.White;
+			this.panel1.Controls.Add(this.SchoolId);
 			this.panel1.Controls.Add(this.StudentSurname);
+			this.panel1.Controls.Add(this.ClassName);
 			this.panel1.Controls.Add(this.StudentName);
 			this.panel1.Controls.Add(this.Icon);
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(500, 80);
 			this.panel1.TabIndex = 0;
+			// 
+			// SchoolId
+			// 
+			this.SchoolId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.SchoolId.Location = new System.Drawing.Point(282, 41);
+			this.SchoolId.Name = "SchoolId";
+			this.SchoolId.Size = new System.Drawing.Size(169, 23);
+			this.SchoolId.TabIndex = 2;
+			this.SchoolId.Text = "#ID";
 			// 
 			// StudentSurname
 			// 
@@ -64,6 +77,15 @@ namespace FeesManagement.Components
 			this.StudentSurname.Size = new System.Drawing.Size(169, 23);
 			this.StudentSurname.TabIndex = 2;
 			this.StudentSurname.Text = "Doe";
+			// 
+			// ClassName
+			// 
+			this.ClassName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ClassName.Location = new System.Drawing.Point(281, 21);
+			this.ClassName.Name = "ClassName";
+			this.ClassName.Size = new System.Drawing.Size(170, 24);
+			this.ClassName.TabIndex = 1;
+			this.ClassName.Text = "Class";
 			// 
 			// StudentName
 			// 
@@ -95,6 +117,8 @@ namespace FeesManagement.Components
 			((System.ComponentModel.ISupportInitialize)(this.Icon)).EndInit();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Label ClassName;
+		private System.Windows.Forms.Label SchoolId;
 		private System.Windows.Forms.PictureBox Icon;
 		private System.Windows.Forms.Label StudentName;
 		private System.Windows.Forms.Label StudentSurname;
