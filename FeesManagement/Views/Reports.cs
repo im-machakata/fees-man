@@ -64,6 +64,7 @@ namespace FeesManagement.Views
 		void LoadStudents(){
 			AddStudent("Mary","Doe",1,"Junior High");
 			AddStudent("John","Doe",1,"Junior High",200);
+			AddStudent("John","Deere",2,"Junior High",200);
 		}
 		
 		// create dummy data
