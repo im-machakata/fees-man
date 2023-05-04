@@ -73,6 +73,7 @@ namespace FeesManagement.Models
                 
         	    // generate user id
         	    student.ID = PrepareUserID(classListCount.ToString(), classNumber);
+        	    student.ClassName = classNumber;
 
                 // add to temporary memory db
                 Students[classNumber].Add(student);
