@@ -21,8 +21,8 @@ namespace FeesManagement.Models
 	    public string Gender { get; set; }
 	    
 	    string PrepareUserID(string id){
-	    	if( id.Length > 999) {
-	    		return String.Concat(ClassName, id);
+	    	if( id.Length > 3) {
+	    		return String.Concat(ClassName.ToString(), id);
 	    	}
 	    	return PrepareUserID( String.Concat("0", id) );
 	    }
